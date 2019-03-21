@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yxw.web.mapper.SchoolMapper">
+    <resultMap id="SchoolResultMap" type="com.yxw.web.entity.School">
+        <id column="school_id" property="schoolId" jdbcType="INTEGER"/>
+        <result column="school_name" property="schoolName" jdbcType="VARCHAR"/>
+        <result column="school_grade" property="schoolGrade" jdbcType="INTEGER"/>
+        <result column="school_addr" property="schoolAddr" jdbcType="VARCHAR"/>
+        <result column="school_intro" property="schoolIntro" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="school_num" property="schoolNum" jdbcType="VARCHAR"/>
+        <result column="school_province_num" property="schoolProvinceNum" jdbcType="INTEGER"/>
+        <result column="school_city_num" property="schoolCityNum" jdbcType="INTEGER"/>
+
+    </resultMap>
+    <sql id="School_Column_List">
+       school_id as schoolId,
+       school_name as schoolName,
+       school_grade as schoolGrade,
+       school_addr as schoolAddr,
+       school_intro as schoolIntro,
+       comment as comment,
+       school_num as schoolNum,
+       school_province_num as schoolProvinceNum,
+       school_city_num as schoolCityNum
+    </sql>
+
+    <insert id="insert" parameterType="com.yxw.web.entity.School">
+        insert into yxw_school
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            school_id,
+            school_name ,
+            school_num,
+            school_province_num,
+            school_city_num
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            null,
+            #{schoolName},
+            #{schoolNum},
+            #{schoolProvinceNum},
+            #{schoolCityNum}
+        </trim>
+    </insert>
+
+    <!--根据省份编号查询该省高校-->
+    <select id="getSchoolByProvinceNum" resultType="com.yxw.web.entity.School">
+        select
+        <include refid="School_Column_List"/>
+        from yxw_school where school_province_num = #{provinceNum,jdbcType=INTEGER}
+    </select>
+    <!--查询所有高校-->
+    <select id="getSchoolAll" resultType="com.yxw.web.entity.School">
+        select
+        <include refid="School_Column_List"/>
+        from yxw_school
+    </select>
+
+
+</mapper>

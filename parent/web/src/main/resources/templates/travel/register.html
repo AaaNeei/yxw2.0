@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>会员注册</title>
+		<script async="" charset="UTF-8" src="https://static.meiqia.com/dist/meiqia.js?_=t"></script>
+		<script src="//hm.baidu.com/hm.js?d7f82c70ba24c58dbd6b23553c88ed03"></script>
+		<script>
+			window.SITEURL = "/";
+			window.CURRENCY_SYMBOL = "￥";
+		</script>
+		<link type="text/css" href="css/register_extend.css" rel="stylesheet">
+		<script type="text/javascript" src="js/register_cookie.js"></script>
+		<link rel="stylesheet" href="http://www.situcms.com/min/?f=/res/js/layer/skin/default/layer.css" id="layuicss-skinlayercss">
+		<style type="text/css" id="MEIQIA-ICON-STYLE">
+			.MEIQIA-ICON {
+				background-size: 40px auto !important;
+				background-repeat: no-repeat !important;
+				background-image: url("https://static.meiqia.com/dist/images/icon-mq.png?v=fjk78qdci9b") !important;
+			}
+			
+			@media only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (min--moz-device-pixel-ratio: 2),
+			only screen and (-o-min-device-pixel-ratio: 2/1),
+			only screen and (min-device-pixel-ratio: 2) {
+				.MEIQIA-ICON {
+					background-image: url("https://static.meiqia.com/dist/images/icon-mq@2x.png?v=fjk78qdci9b") !important;
+				}
+			}
+			
+			.MEIQIA-ICON-CHAT1 {
+				background-position: 0 0 !important;
+			}
+			
+			.MEIQIA-ICON-CHAT2 {
+				background-position: 0 -20px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT3 {
+				background-position: 0 -40px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT4 {
+				background-position: 0 -60px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT5 {
+				background-position: 0 -80px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT6 {
+				background-position: 0 -100px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT7 {
+				background-position: 0 -120px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT8 {
+				background-position: 0 -140px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT9 {
+				background-position: 0 -160px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT10 {
+				background-position: 0 -180px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT11 {
+				background-position: 0 -200px !important;
+			}
+			
+			.MEIQIA-ICON-CHAT12 {
+				background-position: 0 -220px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET1 {
+				background-position: -20px 0 !important;
+			}
+			
+			.MEIQIA-ICON-TICKET2 {
+				background-position: -20px -20px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET3 {
+				background-position: -20px -40px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET4 {
+				background-position: -20px -60px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET5 {
+				background-position: -20px -80px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET6 {
+				background-position: -20px -100px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET7 {
+				background-position: -20px -120px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET8 {
+				background-position: -20px -140px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET9 {
+				background-position: -20px -160px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET10 {
+				background-position: -20px -180px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET11 {
+				background-position: -20px -200px !important;
+			}
+			
+			.MEIQIA-ICON-TICKET12 {
+				background-position: -20px -220px !important;
+			}
+		</style>
+		<style type="text/css" id="MEIQIA-PANEL-STYLE">
+			#MEIQIA-PANEL-HOLDER {
+				position: fixed;
+				bottom: 0;
+				right: 64px;
+				z-index: -1;
+				width: 320px;
+				height: 480px;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+				visibility: hidden;
+				background-color: transparent;
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+				border: 1px solid #eee\0;
+				*border: 1px solid #eee;
+			}
+			
+			#MEIQIA-IFRAME {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: none;
+				width: 100% !important;
+				height: 100% !important;
+				border: 0;
+				padding: 0;
+				margin: 0;
+				float: none;
+				background: none;
+			}
+		</style>
+		<style type="text/css" id="MEIQIA-BTN-STYLE">
+			#MEIQIA-BTN-HOLDER {
+				display: none;
+				position: fixed;
+				bottom: 0;
+				right: 60px;
+				z-index: 2147483647;
+				width: auto;
+				height: auto;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				font-family: 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+				background-color: transparent;
+			}
+			
+			#MEIQIA-BTN,
+			#MEIQIA-BTN span,
+			#MEIQIA-BTN div,
+			#MEIQIA-BTN img {
+				float: none;
+				width: auto;
+				height: auto;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				background: none;
+			}
+			
+			#MEIQIA-BTN {
+				display: block;
+				height: 40px;
+				font-size: 16px;
+				color: #fff;
+				text-align: center;
+				border-left: 1px solid rgba(0, 0, 0, .1);
+				border-top: 1px solid rgba(0, 0, 0, .1);
+				border-right: 1px solid rgba(0, 0, 0, .1);
+				box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);
+				cursor: pointer;
+				text-decoration: none;
+				background-color: #007aff;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BTN-ICON {
+				display: block;
+				float: left;
+				width: 20px;
+				height: 20px;
+				margin: 10px 10px 0;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BTN-LINE {
+				display: block;
+				float: left;
+				width: 1px;
+				height: 100%;
+				background-color: rgba(0, 0, 0, .08);
+				background-color: #000\9;
+				opacity: .1\9;
+				filter: alpha(opacity=10)\9;
+				vertical-align: middle;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BTN-TEXT {
+				display: block;
+				float: left;
+				height: 40px;
+				margin: 0 10px;
+				line-height: 40px;
+				overflow-y: hidden;
+				font-size: 16px;
+				color: #fff;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-CIRCLE {
+				position: absolute;
+				top: -13px;
+				left: -13px;
+				display: none;
+				width: 26px;
+				height: 26px;
+				text-align: center;
+				line-height: 26px;
+				font-size: 14px;
+				color: #fff;
+				border-radius: 15px;
+				background-color: #ff3b30;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE {
+				position: absolute;
+				bottom: 64px;
+				display: none;
+				width: 260px;
+				border: 1px solid #f7f7f7;
+				border-radius: 4px;
+				color: #000;
+				text-align: left;
+				box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);
+				line-height: 1.428571429;
+				background-color: #fff;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-ARROW1 {
+				position: absolute;
+				z-index: 2;
+				font-size: 0;
+				line-height: 0;
+				border-width: 8px 7px 0px;
+				border-color: #fff transparent;
+				border-style: solid dashed dashed;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-ARROW2 {
+				position: absolute;
+				z-index: 1;
+				font-size: 0;
+				line-height: 0;
+				border-width: 10px 8px 0px;
+				border-color: #f7f7f7 transparent;
+				border-style: solid dashed dashed;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE {
+				right: 0;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-ARROW1 {
+				right: 12px;
+				bottom: -8px;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-ARROW2 {
+				right: 11px;
+				bottom: -10px;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-CLOSE {
+				position: absolute;
+				display: none;
+				top: 12px;
+				right: 12px;
+				width: 10px;
+				height: 10px;
+				background-position: -5px -245px;
+				cursor: pointer;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE:hover #MEIQIA-BUBBLE-CLOSE {
+				display: block;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-INSIDE {
+				margin: 12px 18px;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-AVATAR {
+				width: 26px;
+				height: 26px;
+				border-radius: 13px;
+				margin-right: 6px;
+				vertical-align: top;
+				box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-NAME {
+				display: inline-block;
+				margin-top: 3px;
+				font-size: 16px;
+				color: #000;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-MSG {
+				*height: 40px;
+				max-height: 40px;
+				margin-top: 5px;
+				font-size: 14px;
+				overflow: hidden;
+				color: #000;
+			}
+			
+			#MEIQIA-BTN #MEIQIA-BUBBLE-MSG img {
+				width: 16px;
+				height: 16px;
+			}
+		</style>
+		<style type="text/css" id="MEIQIA-INVITE-STYLE">
+			#MEIQIA-INVITE,
+			#MEIQIA-INVITE div,
+			#MEIQIA-INVITE span {
+				float: none;
+				width: auto;
+				height: auto;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				background: none;
+			}
+			
+			#MEIQIA-INVITE {
+				position: fixed;
+				z-index: 2147483647;
+				display: none;
+				width: 340px;
+				height: 130px;
+				margin-bottom: 64px;
+				border: 1px solid #f7f7f7;
+				border-radius: 4px;
+				box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);
+				text-align: left;
+				cursor: pointer;
+				color: #000;
+				line-height: 1.428571429;
+				background-color: #fff;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1,
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+				position: absolute;
+				font-size: 0;
+				line-height: 0;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1 {
+				z-index: 2;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+				z-index: 1;
+			}
+			
+			#MEIQIA-INVITE {
+				right: 60px;
+				bottom: 0;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1 {
+				right: 12px;
+				bottom: -8px;
+				border-top: 8px solid #fff;
+				border-right: 7px solid transparent;
+				border-left: 7px solid transparent;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+				right: 11px;
+				bottom: -10px;
+				border-top: 9px solid #f7f7f7;
+				border-right: 8px solid transparent;
+				border-left: 8px solid transparent;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-CLOSE {
+				position: absolute;
+				right: -20px;
+				top: -20px;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				background-position: 0 -260px;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-CLOSE:hover {
+				background-position: 0 -300px;
+			}
+			
+			#MEIQIA-INVITE #MEIQIA-INVITE-INSIDE {
+				width: 300px;
+				height: 44px;
+				margin: 46px 20px 0;
+				text-align: left;
+				font-size: 14px;
+				line-height: 22px;
+				overflow: hidden;
+				color: #000;
+				/*word-break: break-all;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<link type="text/css" href="css/header.css" rel="stylesheet">
+		<link type="text/css" href="css/skin.css" rel="stylesheet">
+		<div class="web-top">
+			<div class="wm-1200">
+				<div class="notice-txt">
+					<p>为避免演示网站前台混乱，测试账户无权更改演示网站数据！演示网站数据不全最终效果请参考案例网站。</p>
+				</div>
+				<div class="top-login"> <span id="loginstatus"><a class="dl" href="login.html">登录</a><a class="zc" href="register.html">免费注册</a></span>
+					<a class="dd" href="/search/order"><i></i>订单查询</a>
+					<dl class="dh"> <dt><i></i>网站导航</dt>
+						<dd>
+							<a href="xianlu.html" title="成都周边旅游线路">线路</a>
+							<a href="mudidi.html" title="旅游目的地">目的地</a>
+							<a href="jiudian.html" title="九寨沟酒店">酒店</a>
+							<a href="http://www.situcms.com/cars/" title="九寨沟旅游租车">租车</a>
+							<a href="view.html" title="成都周边旅游景点">景点</a>
+							<a href="view_strategy.html" title="九寨沟旅游攻略">攻略</a>
+							<a href="visa.html" title="签证">签证</a>
+							<a href="daoyou.html" title="">导游</a>
+							<a href="http://jiuzhaigou.situcms.com/" title="九寨沟子站">九寨沟子站</a>
+							<a href="/plugins/supplier/pc/login" title="供应商">供应商</a>
+							<a href="http://www.situcms.com/zidingyichanping/" title="/">自定任何产品类型</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="scroll-order">
+					<ul style="margin-top: 0px;">
+						<li>背包客19分钟前评论了
+							<a href="http://www.situcms.com/lines/show_8.html" target="_blank">西安兵马俑+华山+明城墙+高家大院+永兴坊+回民街双飞4日跟团游</a>
+						</li>
+						<li>背包客54分钟前评论了
+							<a href="http://www.situcms.com/hotels/show_8.html" target="_blank">九寨沟星宇国际大酒店</a>
+						</li>
+						<li>米兰达3小时前评论了
+							<a href="http://www.situcms.com/notes/show_9.html" target="_blank">情迷夏威夷——一个火山与海的世界</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--顶部-->
+		<div class="st-header">
+			<div class="wm-1200">
+				<div class="st-logo">
+					<a title="游学网官方网站" href="http://www.youxue.com/"><img src="img/Logo-1.png" alt="logo"></a>
+				</div>
+				<link type="text/css" href="css/city.css" rel="stylesheet">
+				<script type="text/javascript" src="js/city.js"></script>
+				<div class="st-local-city">
+					<div class="head_start_city">
+						<p class="sc_name"><span><em id="current_city">选择城市</em><i class="icon_arrow"></i></span></p>
+						<div class="show_city">
+							<div id="con">
+								<div class="station_search">
+									<div class="station_search_box"> <span class="header_icon"></span> <input class="txt" id="city_search_txt" type="text" placeholder="搜索城市（支持汉字、拼音和首字母查询）"> </div>
+									<div class="station_search_result"> </div>
+								</div>
+								<div class="station_hot">
+									<h4>热门城市</h4>
+									<p>
+										<a class="city-item" href="javascript:void(0)" data-city="东亚">东亚</a>
+										<a class="city-item" href="javascript:void(0)" data-city="东南亚">东南亚</a>
+										<a class="city-item" href="javascript:void(0)" data-city="中亚">中亚</a>
+										<a class="city-item" href="javascript:void(0)" data-city="出境旅游">出境旅游</a>
+										<a class="city-item" href="javascript:void(0)" data-city="南亚">南亚</a>
+										<a class="city-item" href="javascript:void(0)" data-city="周边景点">周边景点</a>
+										<a class="city-item" href="javascript:void(0)" data-city="国内旅游">国内旅游</a>
+										<a class="city-item" href="javascript:void(0)" data-city="欧洲">欧洲</a>
+										<a class="city-item" href="javascript:void(0)" data-city="热门景点">热门景点</a>
+										<a class="city-item" href="javascript:void(0)" data-city="美洲">美洲</a>
+									</p>
+								</div>
+								<div class="tagBox">
+									<ul id="tags" class="station_titlist clearfix">
+										<li data-contain="content_1" class="selectTag">
+											<a href="javascript:void(0)">CD</a>
+										</li>
+										<li data-contain="content_2">
+											<a href="javascript:void(0)">G</a>
+										</li>
+										<li data-contain="content_3">
+											<a href="javascript:void(0)">KMNO</a>
+										</li>
+										<li data-contain="content_4">
+											<a href="javascript:void(0)">R</a>
+										</li>
+										<li data-contain="content_5">
+											<a href="javascript:void(0)">XZ</a>
+										</li>
+									</ul>
+									<div id="tagContent">
+										<div class="tagContent" style="" id="content_1">
+											<div class="line clearfix">
+												<div class="line_left">C</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="出境旅游">出境旅游</a>
+												</div>
+											</div>
+											<div class="line clearfix">
+												<div class="line_left">D</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="东亚">东亚</a>
+													<a class="city-item" href="javascript:void(0)" data-city="东南亚">东南亚</a>
+												</div>
+											</div>
+										</div>
+										<div class="tagContent" style="display:none" id="content_2">
+											<div class="line clearfix">
+												<div class="line_left">G</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="国内旅游">国内旅游</a>
+												</div>
+											</div>
+										</div>
+										<div class="tagContent" style="display:none" id="content_3">
+											<div class="line clearfix">
+												<div class="line_left">K</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="周边景点">周边景点</a>
+												</div>
+											</div>
+											<div class="line clearfix">
+												<div class="line_left">M</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="美洲">美洲</a>
+												</div>
+											</div>
+											<div class="line clearfix">
+												<div class="line_left">N</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="南亚">南亚</a>
+												</div>
+											</div>
+											<div class="line clearfix">
+												<div class="line_left">O</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="欧洲">欧洲</a>
+												</div>
+											</div>
+										</div>
+										<div class="tagContent" style="display:none" id="content_4">
+											<div class="line clearfix">
+												<div class="line_left">R</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="热门景点">热门景点</a>
+												</div>
+											</div>
+										</div>
+										<div class="tagContent" style="display:none" id="content_5">
+											<div class="line clearfix">
+												<div class="line_left">X</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="西亚">西亚</a>
+												</div>
+											</div>
+											<div class="line clearfix">
+												<div class="line_left">Z</div>
+												<div class="line_right clearfix">
+													<a class="city-item" href="javascript:void(0)" data-city="中亚">中亚</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="st-top-search">
+					<div class="st-search-down"> <strong id="typename" data-pinyin="line">线路<i></i></strong>
+						<ul class="st-down-select searchmodel" style="display: none;">
+							<li data-pinyin="line">线路</li>
+							<li data-pinyin="hotel">酒店</li>
+							<li data-pinyin="car">租车</li>
+							<li data-pinyin="spot">景点</li>
+							<li data-pinyin="article">攻略</li>
+							<li data-pinyin="visa">签证</li>
+							<li data-pinyin="guide">导游</li>
+							<li data-pinyin="general/zidingyichanping">自定任何产品类型</li>
+						</ul>
+					</div> <input type="text" id="st-top-search" class="st-txt searchkeyword" placeholder=""> <input type="button" value="搜索" class="st-btn"> <span id="dt-top-search-span" class="hide">   <a href="javascript:;" class="hot_search_key" data-keyword=""></a>  <a href="javascript:;" class="hot_search_key" data-keyword="汉中旅">汉中旅</a>  <a href="javascript:;" class="hot_search_key" data-keyword="九寨沟酒店">九寨沟酒店</a>  </span>
+					<div class="st-hot-dest-box" id="stHotDestBox" style="display: none;">
+						<div class="block-tit"><strong>热门搜索</strong><i class="close-ico"></i></div>
+						<div class="block-nr">
+							<dl> <dt>热搜词</dt>
+								<dd class="clearfix">
+									<a class="hot_search_key" href="javascript:;" data-keyword=""></a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="汉中旅">汉中旅</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="九寨沟酒店">九寨沟酒店</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="九寨沟自助游">九寨沟自助游</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="九寨沟酒">九寨沟酒</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="九寨沟租车">九寨沟租车</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="九寨黄龙双飞">九寨黄龙双飞</a>
+									<a class="hot_search_key" href="javascript:;" data-keyword="牛逼">牛逼</a>
+								</dd>
+							</dl>
+							<dl> <dt>目的地</dt>
+								<dd class="clearfix">
+									<a href="http://www.situcms.com/guonelvyou/" target="_blank">国内旅游</a>
+									<a href="http://www.situcms.com/lasa/" target="_blank">拉萨</a>
+									<a href="http://www.situcms.com/riben/" target="_blank">日本</a>
+									<a href="http://www.situcms.com/emeileshan/" target="_blank">峨眉乐山</a>
+									<a href="http://www.situcms.com/jiuzhaigou/" target="_blank">九寨沟</a>
+									<a href="http://www.situcms.com/chujinglvyou/" target="_blank">出境旅游</a>
+									<a href="http://www.situcms.com/hanguo/" target="_blank">韩国</a>
+									<a href="http://www.situcms.com/ruishi/" target="_blank">瑞士</a>
+									<a href="http://www.situcms.com/chaoxian/" target="_blank">朝鲜</a>
+									<a href="http://www.situcms.com/deguo/" target="_blank">德国</a>
+									<a href="http://www.situcms.com/na/" target="_blank">那曲</a>
+									<a href="http://www.situcms.com/yidali/" target="_blank">意大利</a>
+									<a href="http://www.situcms.com/changdu/" target="_blank">昌都</a>
+									<a href="http://www.situcms.com/beijing/" target="_blank">北京</a>
+									<a href="http://www.situcms.com/sichuan1/" target="_blank">四川</a>
+									<a href="http://www.situcms.com/guizhou/" target="_blank">贵州</a>
+									<a href="http://www.situcms.com/xicang/" target="_blank">西藏</a>
+									<a href="http://www.situcms.com/xicheng/" target="_blank">西城</a>
+									<a href="http://www.situcms.com/chaoyang/" target="_blank">朝阳</a>
+									<a href="http://www.situcms.com/jingshan/" target="_blank">石景山</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--热搜框-->
+					<script>
+						$(function() {
+							$('#st-top-search').click(function(event) {
+								$('#stHotDestBox').show();
+								event.stopPropagation();
+							});
+							$('.close-ico').click(function(event) {
+								$('#stHotDestBox').hide();
+								event.stopPropagation();
+							});
+							$('body').click(function() {
+								$('#stHotDestBox').hide();
+							});
+						})
+					</script>
+				</div>
+				<div class="st-link-way"> <img class="link-way-ico" src="/res/images/24hours-ico.png" width="45" height="45">
+					<div class="link-way-txt"> <em>400-609-9927</em> </div>
+				</div>
+			</div>
+		</div>
+		<!--header-->
+		<div class="st-nav">
+			<div class="wm-1200">
+				<div class="st-global">
+					<div class="global-bt">旅游导航</div>
+					<div class="global-list" style="display: none;">
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20161116/20161116145458_20x20.png"></em><a href="http://www.situcms.com/" target="_blank">产品功能</a></strong> <p>   <a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">直接营销</span></a>  <a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">间接营销</span></a>  <a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">辅助营销</span></a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">直接营销</span></a></dt>
+										<dd>
+											<a href="http://www.situcms.com/ship/" target="_blank">邮轮</a>
+											<a href="http://www.situcms.com/outdoor/" target="_blank">户外</a>
+											<a href="http://www.situcms.com/insurance/" target="_blank">保险</a>
+											<a href="http://www.situcms.com/tuan/" target="_blank">团购</a>
+											<a href="http://www.situcms.com/customize/" target="_blank">私人定制</a>
+											<a href="http://www.situcms.com/techan/" target="_blank">通用</a>
+										</dd>
+									</dl>
+									<dl> <dt><a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">间接营销</span></a></dt>
+										<dd>
+											<a href="http://www.situcms.com/news/" target="_blank">资讯</a>
+											<a href="http://www.situcms.com/questions/" target="_blank">问答</a>
+											<a href="http://www.situcms.com/jieban/" target="_blank">结伴</a>
+											<a href="http://www.situcms.com/notes/" target="_blank">游记</a>
+										</dd>
+									</dl>
+									<dl class="clear"> <dt><a href="http://www.situcms.com/" target="_blank"><span style="color:#FF3300">辅助营销</span></a></dt>
+										<dd>
+											<a href="http://www.situcms.com/zt/chunji" target="_blank">专题</a>
+											<a href="http://www.situcms.com/member/club/" target="_blank">积分俱乐部</a>
+										</dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/9bfc143523607fb073e9c2505da6af4e.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20161116/20161116145528_20x20.png"></em><a href="javascript:;" target="_blank">国内旅游</a></strong> <p>   <a href="/sichuan1/" target="_blank"><span style="color:#FF6600">四川</span></a>  <a href="javascript:;" target="_blank"><span style="color:#FF6600">西藏</span></a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="/sichuan1/" target="_blank"><span style="color:#FF6600">四川</span></a></dt>
+										<dd>
+											<a href="/jiuzhaigou/" target="_blank"><span style="color:#000000">九寨沟</span></a>
+											<a href="/emeileshan/" target="_blank"><span style="color:#000000">峨眉山</span></a>
+											<a href="/daochengyading/" target="_blank"><span style="color:#000000">稻城亚丁</span></a>
+											<a href="/shunanzhuhai/" target="_blank"><span style="color:#000000">蜀南竹海</span></a>
+										</dd>
+									</dl>
+									<dl> <dt><a href="javascript:;" target="_blank"><span style="color:#FF6600">西藏</span></a></dt>
+										<dd>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">拉萨</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">那曲</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">昌都</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">阿里</span></a>
+										</dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/2f5a635683781849c933d21e13684026.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20161116/20161116145554_20x20.png"></em><a href="http://www.situcms.com/lines/" target="_blank">出境旅游</a></strong> <p>   <a href="#" target="_blank"><span style="color:#FF6600">美洲</span></a>  <a href="javascript:;" target="_blank"><span style="color:#FF6600">欧洲</span></a>  <a href="javascript:;" target="_blank"><span style="color:#FF6600">澳洲</span></a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="#" target="_blank"><span style="color:#FF6600">美洲</span></a></dt>
+										<dd>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">美国</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">加拿大</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">墨西哥</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">巴西</span></a>
+										</dd>
+									</dl>
+									<dl> <dt><a href="javascript:;" target="_blank"><span style="color:#FF6600">欧洲</span></a></dt>
+										<dd>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">英国</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">意大利</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">俄罗斯</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">法国</span></a>
+										</dd>
+									</dl>
+									<dl class="clear"> <dt><a href="javascript:;" target="_blank"><span style="color:#FF6600">澳洲</span></a></dt>
+										<dd>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">澳大利亚</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">新西兰</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">大溪地</span></a>
+											<a href="javascript:;" target="_blank"><span style="color:#000000">斐济</span></a>
+										</dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/2f5a635683781849c933d21e13684026.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20161116/20161116145618_20x20.png"></em><a href="http://www.situcms.com/lines/" target="_blank">主题旅游</a></strong> <p>   <a href="/lines/" target="_blank"><span style="color:#996600">亲子游</span></a>  <a href="/lines/" target="_blank">蜜月游</a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="/lines/" target="_blank"><span style="color:#996600">亲子游</span></a></dt>
+										<dd>
+											<a href="javascript:;" target="_blank">夏令营</a>
+										</dd>
+									</dl>
+									<dl> <dt><a href="/lines/" target="_blank">蜜月游</a></dt>
+										<dd> </dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/163df1f9caf22dbe0ce43857fb115eef.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20161116/20161116145644_20x20.png"></em><a href="javascript:;" target="_blank">周边旅游</a></strong> <p>   <a href="null" target="_blank">九寨沟</a>  <a href="javascript:;" target="_blank">峨眉山</a>  <a href="javascript:;" target="_blank">西岭雪山</a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="null" target="_blank">九寨沟</a></dt>
+										<dd> </dd>
+									</dl>
+									<dl> <dt><a href="javascript:;" target="_blank">峨眉山</a></dt>
+										<dd> </dd>
+									</dl>
+									<dl class="clear"> <dt><a href="javascript:;" target="_blank">西岭雪山</a></dt>
+										<dd> </dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/163df1f9caf22dbe0ce43857fb115eef.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+						<div class="gl-list-tabbox">
+							<h3> <strong><em><img src="http://www.situcms.com/uploads/main/allimg/20170914/20170914104933_20x20.png"></em><a href="javascript:;" target="_blank">海岛游</a></strong> <p>   <a href="/spots/" target="_blank">普吉岛</a>  <a href="/spots/" target="_blank">苏梅岛</a>  </p> <i class="arrow-rig"></i> </h3>
+							<div class="tabcon-item">
+								<div class="item-list">
+									<dl> <dt><a href="/spots/" target="_blank">普吉岛</a></dt>
+										<dd> </dd>
+									</dl>
+									<dl> <dt><a href="/spots/" target="_blank">苏梅岛</a></dt>
+										<dd> </dd>
+									</dl>
+								</div>
+								<div class="ad-box">
+									<a href="javascript:;" target="_blank"><img src="http://www.situcms.com/uploads/2016/0614/163df1f9caf22dbe0ce43857fb115eef.png" title="" width="980" height="100"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function() {
+						$('.gl-list-tabbox,.st-dh-con').hover(function() {
+							$(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+							$(this).children('h3').find('.arrow-rig').hide();
+						}, function() {
+							$(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+							$(this).children('h3').find('.arrow-rig').show();
+						})
+						$('.global-list').hide();
+						$('.st-global').hoverDelay(function() {
+							$('.global-list').show();
+						}, function() {
+							$('.global-list').hide();
+						})
+					})
+				</script>
+				<div class="st-menu">
+					<ul class="clearfix">
+						<li class="">
+							<a href="index.html">首页<s></s></a>
+						</li>
+						<li class="nav_header_1"> <img class="st-nav-icon" src="img/biaoqian/xinpin.png"> <s></s>
+							<a href="xianlu.html" title="成都周边旅游线路"> 线路 <i class="st-arrow-ico"></i> </a>
+							<div class="down-nav" style="width: 1349px; left: -366.5px;">
+								<div class="sub-list" style="width: 214px; left: 302px;">
+									<a href="/lines/jiuzhaigou/">周边游</a>
+									<a href="/lines/jiuzhaigou-0-0-0-0-0-142-1">自驾游</a>
+									<a href="/emeileshan/">省内特价游</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav_header_12"> <s></s>
+							<a href="mudidi.html" title="旅游目的地"> 目的地 </a>
+						</li>
+						<li class="nav_header_2"> <s></s>
+							<a href="jiudian.html" title="九寨沟酒店"> 酒店 </a>
+						</li>
+						<li class="nav_header_3"> <s></s>
+							<a href="http://www.situcms.com/cars/" title="九寨沟旅游租车"> 租车 <i class="st-arrow-ico"></i> </a>
+							<div class="down-nav" style="width: 1349px;">
+								<div class="sub-list">
+									<a href="/cars/all-1-0-0-1">越野租车</a>
+									<a href="/cars/all-2-0-0-1">商务租车</a>
+									<a href="/cars/all-3-0-0-1">旅游大巴租车</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav_header_5"> <s></s>
+							<a href="view.html" title="成都周边旅游景点"> 景点 <i class="st-arrow-ico"></i> </a>
+							<div class="down-nav" style="width: 1349px;">
+								<div class="sub-list">
+									<a href="/spots/jiuzhaigou/">四川景点</a>
+									<a href="/spots/emeileshan/">国内景点</a>
+									<a href="/spots/jiuzhaigou-0-0-5-1">出境景点</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav_header_4"> <s></s>
+							<a href="view_strategy.html" title="九寨沟旅游攻略"> 攻略 </a>
+						</li>
+						<li class="nav_header_8"> <s></s>
+							<a href="visa.html" title="签证"> 签证 <i class="st-arrow-ico"></i> </a>
+							<div class="down-nav" style="width: 1349px;">
+								<div class="sub-list">
+									<a href="/visa/taiguo/">商务签证</a>
+									<a href="/visa/taiguo-0-0-6-1">旅游签证</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav_header_106"> <s></s>
+							<a href="daoyou.html" title="导游"> 导游 </a>
+						</li>
+						<li class="nav_header_"> <img class="st-nav-icon" src="img/biaoqian/jingxuan.png"> <s></s>
+							<a href="http://jiuzhaigou.situcms.com/" title="九寨沟子站"> 九寨沟子站 </a>
+						</li>
+						<li class="nav_header_"> <img class="st-nav-icon" src="img/biaoqian/remen.png"> <s></s>
+							<a href="/plugins/supplier/pc/login" title="供应商"> 供应商 </a>
+						</li>
+						<li class="nav_header_16" style="display: none;"> <s></s>
+							<a href="http://www.situcms.com/zidingyichanping/" title="/"> 自定任何产品类型 </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主导航-->
+		<script type="text/javascript" src="js/SuperSlide.min.js"></script>
+		<script>
+			var SITEURL = "/";
+			$(function() {
+				$(".st-search-down").hover(function() {
+					$(".st-down-select").show()
+				}, function() {
+					$(".st-down-select").hide()
+				});
+				$(".searchmodel li").click(function() {
+					var pinyin = $(this).attr('data-pinyin');
+					var typename = $(this).text();
+					$("#typename").html(typename + '<i></i>');
+					$("#typename").attr('data-pinyin', pinyin);
+					$(".st-down-select").hide()
+				});
+				$(".searchmodel li:first").trigger('click');
+				//search
+				$('.st-btn').click(function() {
+					var keyword = $.trim($('.searchkeyword').val());
+					if(keyword == '') {
+						keyword = $('.searchkeyword').attr('placeholder');
+						if(keyword == '') {
+							$('.searchkeyword').focus();
+							return false;
+						}
+					}
+					var pinyin = $("#typename").attr('data-pinyin');
+					var url = SITEURL + 'query/' + pinyin + '?keyword=' + encodeURIComponent(keyword);
+					location.href = url;
+				});
+				$('.hot_search_key').click(function() {
+					var keyword = $(this).attr('data-keyword');
+					var pinyin = $("#typename").attr('data-pinyin');
+					var url = SITEURL + 'query/' + pinyin + '?keyword=' + encodeURIComponent(keyword);
+					location.href = url;
+				});
+				//search focus
+				var topSearch = {};
+				topSearch.placeholder = $('#st-top-search').attr('placeholder');
+				topSearch.spanHtml = $('#dt-top-search-span').html();
+				$('#st-top-search').focus(function() {
+					$('#st-top-search').attr('placeholder', '');
+					$('#dt-top-search-span').html('');
+					$(this).keyup(function(event) {
+						if(event.keyCode == 13) {
+							$('.st-btn').click();
+						}
+					});
+				});
+				$('#st-top-search').blur(function() {
+					if($(this).val() == '') {
+						$('#st-top-search').attr('placeholder', topSearch.placeholder);
+						$('#dt-top-search-span').html(topSearch.spanHtml);
+					}
+				});
+				//导航的选中状态
+				$(".st-menu a").each(function() {
+					var url = window.location.href;
+					url = url.replace('index.php', '');
+					url = url.replace('index.html', '');
+					var ulink = $(this).attr("href");
+					if(url == ulink) {
+						$(this).parents("li:first").addClass('active');
+					}
+				})
+				//登陆状态
+				$.ajax({
+					type: "POST",
+					async: false,
+					url: SITEURL + "member/login/ajax_is_login",
+					dataType: 'json',
+					success: function(data) {
+						if(data.status) {
+							var msg_new = data.user.has_msg > 0 ? '<s class="point-icon"></s>' : '';
+							$txt = '<a class="dl" style="padding:0" href="javascript:;">你好,</a>';
+							$txt += '<a class="dl" href="http://www.situcms.com/member/">' + data.user.nickname + '</a>';
+							$txt += '<a class="dl" href="http://www.situcms.com/member/login/loginout">退出</a>';
+							$txt += '<a class="msg" href="http://www.situcms.com/member/message/index"><i></i>消息' + msg_new + '</a>';
+							//$txt+= '<a class="dl" href="/member">个人中心</a>';
+						} else {
+							$txt = '<a class="dl" href="http://www.situcms.com/member/login">登录</a>';
+							$txt += '<a class="zc" href="http://www.situcms.com/member/register">免费注册</a>';
+						}
+						$("#loginstatus").html($txt);
+					}
+				})
+				//二级导航
+				var offsetLeft = new Array();
+				var windowWidth = $(window).width();
+
+				function get_width() {
+					windowWidth = $(window).width();
+					//设置"down-nav"宽度为浏览器宽度
+					$(".down-nav").width($(window).width());
+					$(".st-menu li").hover(function() {
+						var liWidth = $(this).width() / 2;
+						$(this).addClass("this-hover");
+						offsetLeft = $(this).offset().left;
+						$(this).children(".down-nav").css("left", -offsetLeft);
+						offsetLeft = $(this).offset().left;
+						//获取当前选中li下的sub-list宽度
+						var nav_left = $(this).parents(".wm-1200:first").offset().left;
+						var nav_width = $(this).parents(".wm-1200:first").width();
+						var nav_right = nav_left + nav_width;
+						var sub_list_width = $(this).children(".down-nav").children(".sub-list").width();
+						if(sub_list_width > nav_width)
+							sub_list_width = nav_width;
+						var sub_list_left = offsetLeft - sub_list_width / 2 + liWidth;
+						var sub_list_right = sub_list_left + sub_list_width;
+						$(this).children(".down-nav").children(".sub-list").css("width", sub_list_width);
+						$(this).children(".down-nav").children(".sub-list").css("left", sub_list_left);
+						if(sub_list_left < nav_left) {
+							$(this).children(".down-nav").children(".sub-list").css("left", nav_left);
+						}
+						if(sub_list_right > nav_right) {
+							$(this).children(".down-nav").children(".sub-list").css("left", nav_right - sub_list_width);
+						}
+						// alert(nav_left);
+						/*  var offsetRight = windowWidth-offsetLeft;
+						  var side_width = (windowWidth - 1200)/2;
+						  if(sub_list_width > offsetRight){
+						      $(this).children(".down-nav").children(".sub-list").css({"right":side_width,"left":offsetLeft-sub_list_width/2+liWidth,"width":"auto"});
+						  }
+						  if(side_width > offsetLeft-sub_list_width/2+liWidth){
+						      $(this).children(".down-nav").children(".sub-list").css({"right":side_width,"left":side_width,"width":"auto"});
+						  }
+						  */
+					}, function() {
+						$(this).removeClass("this-hover");
+					});
+				};
+				$(window).resize(function() {
+					get_width();
+				});
+				get_width();
+				//选中导航
+				var typeid = "";
+				if(typeid != '') {
+					$('.nav_header_' + typeid).addClass('active');
+				}
+				//超出的栏目隐藏
+				var maxWidth = 0;
+				var primaryMenuLi = $(".st-menu>ul>li");
+				for(i = 0; i < primaryMenuLi.length; i++) {
+					maxWidth += $(primaryMenuLi[i]).width();
+					if(maxWidth > 980) {
+						$(primaryMenuLi[i]).hide()
+					}
+				}
+			})
+		</script>
+		<script>
+			//全站顶部滚动订单信息
+			function AutoScroll(obj) {
+				$(obj).find("ul:first").animate({
+					marginTop: "-35px"
+				}, 500, function() {
+					$(this).css({
+						marginTop: "0px"
+					}).find("li:first").appendTo(this);
+				});
+			}
+			$(document).ready(function() {
+				var myar = setInterval('AutoScroll(".scroll-order")', 5000)
+				$(".scroll-order").hover(function() {
+					clearInterval(myar)
+				}, function() {
+					myar = setInterval('AutoScroll(".scroll-order")', 5000)
+				}); //当鼠标放上去的时候，滚动停止，鼠标离开的时候滚动开始
+			})
+			$(function() {
+				//顶部网站导航显示隐藏
+				var topNavToggle = $('.top-login dl');
+				topNavToggle.hover(function() {
+					$(this).css({
+						background: '#fff',
+						borderLeft: '1px solid #f9f7f6',
+						borderRight: '1px solid #f9f7f6'
+					});
+					$(this).children('dd').slideDown(100)
+				}, function() {
+					$(this).css({
+						background: 'none',
+						borderLeft: '1px solid #f9f7f6',
+						borderRight: '1px solid #f9f7f6'
+					});
+					$(this).children('dd').slideUp(100)
+				});
+				//线路首页分类导航
+				$('.st-dh-con').hover(function() {
+					$(this).children('h3').addClass('hover').next('.st-dh-item').show()
+				}, function() {
+					$(this).children('h3').removeClass('hover').next('.st-dh-item').hide()
+				})
+			})
+		</script>
+		<div class="st-userlogin-box" style="background: url('img/qianzheng.jpg') center top no-repeat;">
+			<div class="st-login-wp">
+
+				<div class="st-reg-box">
+					<div class="reg-tabnav"> <span class="on" data-type="phone">手机注册</span> <i></i> <span data-type="email">邮箱注册</span> </div>
+					<script>
+						$(function() {
+							$('.reg-tabnav span').click(function() {
+								$(this).addClass('on').siblings().removeClass('on');
+								var frm = $(this).attr('data-type');
+								$(".reg-cont-box").find('ul').hide();
+								$('#' + frm + '_reg').show();
+								$('#regfrm').val(frm + 'frm');
+							})
+						})
+					</script>
+					<div class="reg-cont-box">
+						<form id="phonefrm" method="post" action="/member/register/doreg" novalidate="novalidate">
+							<ul id="phone_reg">
+								<li> <span class="bt-sp">登录帐号</span> <input type="text" class="reg-text w230" id="mobile" name="mobile" placeholder="请输入手机号"> <span class="msg_contain"></span> </li>
+								<li> <span class="bt-sp">验证码</span> <input type="text" class="reg-text w105" id="p_checkcode" name="p_checkcode"> <span class="reg-yzm"><img src="/captcha" width="114" height="31" onclick="this.src=this.src+'?math='+ Math.random()"></span> <span class="reg-change"><a href="javascript:;">换一张</a></span> <span class="msg_contain"></span> </li>
+								<li> <span class="bt-sp">密码</span> <input type="password" name="password1" id="password1" class="reg-text w230" placeholder="请输入登录密码"> <span class="msg_contain"></span> <span class="complex_contain"></span> </li>
+								<li> <span class="bt-sp">确认密码</span> <input type="password" name="password2" id="password2" class="reg-text w230" placeholder="请再次输入登录密码"> <span class="msg_contain"></span> </li>
+								<li> </li>
+							</ul> <input type="hidden" name="frmcode" value="bd8a4076397bd167ecfcfed9a534b681"> <input type="hidden" name="regtype" value="phone"> </form>
+						<!--邮箱登陆-->
+						<form id="emailfrm" method="post" action="/member/register/doreg" novalidate="novalidate">
+							<ul id="email_reg" style="display: none">
+								<li> <span class="bt-sp">登录帐号</span> <input type="text" class="reg-text w230" id="email" name="email" placeholder="请输入邮箱帐号"> <span class="msg_contain"></span> </li>
+								<li> <span class="bt-sp">验证码</span> <input type="text" class="reg-text w105" id="e_checkcode" name="e_checkcode"> <span class="reg-yzm"><img src="/captcha" onclick="this.src=this.src+'?math='+ Math.random()" width="114" height="31"></span> <span class="reg-change"><a href="javascript:;">换一张</a></span> <span class="msg_contain"></span> </li>
+								<li> <span class="bt-sp">密码</span> <input type="password" class="reg-text w230" name="e_password1" id="e_password1" placeholder="请输入登录密码"> <span class="msg_contain"></span> <span class="complex_contain"></span> </li>
+								<li> <span class="bt-sp">确认密码</span> <input type="password" name="e_password2" id="e_password2" class="reg-text w230" placeholder="请再次输入登录密码"> <span class="msg_contain"></span> </li>
+								<li> </li> <input type="hidden" name="frmcode" value="bd8a4076397bd167ecfcfed9a534b681"> <input type="hidden" name="regtype" value="email"> </ul>
+						</form>
+						<div class="now-reg-btn">
+							<a href="javascript:;">立即注册</a>
+						</div>
+					</div>
+					<div class="reg-tig-box">
+						<p>已有账号，
+							<a href="/member/login">立即登录</a>
+						</p>
+						<dl> <dt>使用其他方式登录</dt>
+							<dd>
+								<a class="qq qqlogin" href="http://www.situcms.com/plugins/login_qq/index/index/?refer=http%3A%2F%2Fwww.situcms.com%2Fmember%2F">QQ</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div> <input type="hidden" id="regfrm" value="phonefrm"> <input type="hidden" id="backurl" value="http://www.situcms.com/member/">
+		<script type="text/javascript" src="js/layer.js"></script>
+		<script>
+			$(function() {
+				//注册
+				$('.now-reg-btn').click(function() {
+					var regfrm = $("#regfrm").val();
+					$('#' + regfrm).submit()
+				})
+				//验证码刷新
+				$('.reg-change').click(function() {
+					$(this).parents('li').first().find('img').trigger('click');
+				})
+				//发送短信验证码
+				$('.sendmsg').click(function() {
+					var mobile = $("#mobile").val();
+					var regPartton = /^1+\d{10}$/;
+					if(!regPartton.test(mobile)) {
+						layer.alert('请输入正确的手机号码', {
+							icon: 5
+						});
+						return false;
+					}
+					var pcode = $("#p_checkcode").val();
+					if(pcode == '') {
+						layer.alert('请填写验证码', {
+							icon: 5
+						});
+						return false;
+					}
+
+					var bool = true;
+					$.ajax({
+						url: SITEURL + 'member/register/ajax_reg_checkmobile',
+						type: "POST",
+						async: false,
+						cache: false,
+						data: {
+							mobile: mobile
+						},
+						dataType: 'text',
+						success: function(msg) {
+							console.log(msg);
+							if(msg == 'false') {
+								bool = false;
+							}
+						}
+					});
+					if(!bool) {
+						layer.alert('手机号已经注册,请直接登录', {
+							icon: 5
+						});
+						return false;
+					}
+
+					var t = this;
+					//发送次数判断
+					var sendnum = $.cookie('sendnum') ? $.cookie('sendnum') : 0;
+					if(sendnum > 3) {
+						layer.alert("验证码发送请求过于频繁,请过15分钟后再试", {
+							icon: 5
+						});
+						return false;
+					}
+					if(sendnum != 0) {
+						$.cookie('sendnum', sendnum++);
+					} else {
+						$.cookie('sendnum', 1, {
+							expires: 1 / 96
+						});
+					}
+					var token = "bd8a4076397bd167ecfcfed9a534b681";
+					var url = SITEURL + 'member/register/ajax_send_msgcode';
+					t.disabled = true;
+					t.value = "发送中...";
+					$.post(url, {
+						mobile: mobile,
+						token: token,
+						pcode: pcode
+					}, function(data) {
+						t.value = "获取验证码";
+						if(data.status) {
+							code_timeout(60);
+							return false;
+						} else {
+							t.disabled = false;
+							layer.alert(data.msg, {
+								icon: 5
+							});
+							return false;
+						}
+					}, 'json');
+				})
+				//发送邮箱验证码
+				$('.sendemail').click(function() {
+					var email = $("#email").val();
+					var regPartton = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+					if(!regPartton.test(email)) {
+						layer.alert('请输入正确的邮箱', {
+							icon: 5
+						});
+						return false;
+					}
+					var pcode = $("#e_checkcode").val();
+					if(pcode == '') {
+						layer.alert('请填写验证码', {
+							icon: 5
+						});
+						return false;
+					}
+					var t = this;
+					var token = "bd8a4076397bd167ecfcfed9a534b681";
+					var url = SITEURL + "member/register/ajax_send_emailcode";
+					var sendnum = $.cookie('email_sendnum') ? $.cookie('email_sendnum') : 0;
+					if(sendnum > 3) {
+						layer.alert('验证码发送请求过于频繁,请过15分钟后再试', {
+							icon: 5
+						});
+						return false;
+					}
+					if(sendnum != 0) {
+						$.cookie('email_sendnum', sendnum++);
+					} else {
+						$.cookie('email_sendnum', 1, {
+							expires: 1 / 96
+						});
+					}
+					t.disabled = true;
+					t.value = "发送中...";
+					$.post(url, {
+						email: email,
+						token: token,
+						pcode: pcode
+					}, function(data) {
+						t.value = "获取验证码";
+						if(data.status) {
+							email_code_timeout(60);
+							return false;
+						} else {
+							t.disabled = false;
+							layer.alert(data.msg, {
+								icon: 5
+							});
+							return false;
+						}
+					}, 'json');
+				});
+				/*手机注册验证开始*/
+				jQuery.validator.addMethod("mobile", function(value, element) {
+					var pattern = /^1+\d{10}$/;
+					return pattern.test(value);
+				}, "请输入正确的手机号");
+				$("#phonefrm").validate({
+					rules: {
+						'mobile': {
+							required: true,
+							mobile: true,
+							remote: {
+								url: SITEURL + 'member/register/ajax_reg_checkmobile',
+								type: 'post'
+							}
+						},
+						'password1': {
+							required: true,
+							minlength: 6
+						},
+						'password2': {
+							required: true,
+							equalTo: '#password1'
+						},
+						'p_checkcode': {
+							required: true,
+							remote: {
+								url: SITEURL + 'pub/ajax_check_code',
+								type: 'post',
+								data: {
+									checkcode: function() {
+										return $("#p_checkcode").val();
+									}
+								}
+							}
+						},
+						'msgcode': {
+							required: true,
+							remote: {
+								url: SITEURL + 'member/register/ajax_check_msgcode',
+								type: 'post',
+								data: {
+									mobile: function() {
+										return $("#mobile").val();
+									}
+								}
+							}
+						},
+						agreement: {
+							required: true
+						}
+					},
+					messages: {
+						'mobile': {
+							required: '手机号不能为空',
+							remote: '该手机号已被注册,您可以<a href="/member/login">直接登陆</a>'
+						},
+						'password1': {
+							required: '密码不能为空',
+							minlength: '密码不得小于6位'
+						},
+						'password2': {
+							required: '密码前后不一致',
+							equalTo: '密码前后不一致'
+						},
+						'p_checkcode': {
+							required: '验证码不能为空',
+							remote: '验证码错误'
+						},
+						'msgcode': {
+							required: '验证码不能为空',
+							remote: '验证码错误'
+						},
+						'agreement': {
+							required: '请先同意网站服务条款'
+						}
+					},
+					errorPlacement: function(error, element) {
+						$(element).parents('li:first').find('.msg_contain').html(error);
+						$(element).parents('li:first').find('.msg_contain').addClass('reg-error-txt').removeClass('reg-pass-ico');
+					},
+					success: function(msg, element) {
+						$(element).parents('li:first').find('.msg_contain').html('');
+						$(element).parents('li:first').find('.msg_contain').addClass('reg-pass-ico').removeClass('reg-error-txt');
+						if($(element).is('#password1')) {
+							set_pwd_safe('#phonefrm', '#password1');
+						}
+					},
+					onkeyup: function(element, event) {
+						set_pwd_safe('#phonefrm', '#password1');
+						$(element).valid();
+					},
+					submitHandler: function(form) {
+						var frmdata = $("#phonefrm").serialize();
+						$.ajax({
+							type: 'POST',
+							url: SITEURL + 'member/register/ajax_doreg',
+							data: frmdata,
+							dataType: 'json',
+							success: function(data) {
+								if(data.status) {
+									var url = $("#backurl").val();
+									$('body').append(data.js); //同步登陆js
+									layer.msg(data.msg, {
+										icon: 6,
+										time: 1000
+									})
+									setTimeout(function() {
+										window.open(url, '_self');
+									}, 500);
+								} else {
+									layer.msg(data.msg, {
+										icon: 5,
+										time: 1000
+									})
+								}
+							}
+						})
+					}
+				});
+				//邮箱注册验证
+				$("#emailfrm").validate({
+					rules: {
+						'email': {
+							required: true,
+							email: true,
+							remote: {
+								url: SITEURL + 'member/register/ajax_check_email',
+								type: 'post'
+							}
+						},
+						'e_password1': {
+							required: true,
+							minlength: 6
+						},
+						'e_password2': {
+							required: true,
+							equalTo: '#e_password1'
+						},
+						'e_checkcode': {
+							required: true,
+							remote: {
+								url: SITEURL + 'pub/ajax_check_code',
+								type: 'post',
+								data: {
+									checkcode: function() {
+										return $("#e_checkcode").val();
+									}
+								}
+							}
+						},
+						e_email_code: {
+							required: true,
+							remote: {
+								url: SITEURL + 'member/register/ajax_check_email_code',
+								type: 'post',
+								data: {
+									email: function() {
+										return $("#email").val();
+									}
+								}
+							}
+						},
+						'e_agreement': {
+							required: true
+						}
+					},
+					messages: {
+						'email': {
+							required: '邮箱不能为空',
+							email: '邮箱格式错误',
+							remote: '该邮箱已经被注册,您可以<a href="/member/login">直接登陆</a>'
+						},
+						'e_password1': {
+							required: '密码不能为空',
+							minlength: '密码不得小于6位'
+						},
+						'e_password2': {
+							required: '密码前后不一致',
+							equalTo: '密码前后不一致'
+						},
+						'e_email_code': {
+							required: '邮箱验证码不能为空',
+							remote: '验证码错误'
+						},
+						'e_checkcode': {
+							required: '验证码不能为空',
+							remote: '验证码错误'
+						},
+						'e_agreement': {
+							required: '请先同意网站服务条款'
+						}
+					},
+					errorPlacement: function(error, element) {
+						$(element).parents('li:first').find('.msg_contain').html(error);
+						$(element).parents('li:first').find('.msg_contain').addClass('reg-error-txt').removeClass('reg-pass-ico');
+					},
+					success: function(msg, element) {
+						$(element).parents('li:first').find('.msg_contain').html('');
+						$(element).parents('li:first').find('.msg_contain').addClass('reg-pass-ico').removeClass('reg-error-txt');
+						if($(element).is('#e_password1')) {
+							set_pwd_safe('#emailfrm', '#e_password1');
+						}
+					},
+					onkeyup: function(element, event) {
+						set_pwd_safe('#emailfrm', '#e_password1');
+						$(element).valid();
+					},
+					submitHandler: function(form) {
+						var frmdata = $("#emailfrm").serialize();
+						$.ajax({
+							type: 'POST',
+							url: SITEURL + 'member/register/ajax_doreg',
+							data: frmdata,
+							dataType: 'json',
+							success: function(data) {
+								if(data.status) {
+									var url = $("#backurl").val();
+									$('body').append(data.js); //同步登陆js
+									layer.msg(data.msg, {
+										icon: 6,
+										time: 1000
+									})
+									setTimeout(function() {
+										window.open(url, '_self');
+									}, 500);
+								} else {
+									layer.msg(data.msg, {
+										icon: 5,
+										time: 1000
+									})
+								}
+							}
+						})
+					}
+				});
+			})
+			//密码强度
+			function set_pwd_safe(pselector, selector) {
+				var pwd = $(pselector + ' ' + selector).val();
+				var pattern_1 = /^[0-9]*$/i;
+				var pattern_2 = /[a-z0-9]+/i;
+				var obj = $(pselector).find('.complex_contain');
+				var html = '';
+				//弱
+				if(pattern_1.test(pwd) && pwd.length < 8) {
+					html = "<span class='reg-pw-intensity ruo'>弱</span>";
+					obj.html(html);
+					return false;
+				}
+				//中
+				if(pattern_1.test(pwd) && pwd.length >= 8) {
+					html = "<span class='reg-pw-intensity zhong'>中</span>";
+					obj.html(html);
+					return false;
+				}
+				//高
+				if(pattern_2.test(pwd) && pwd.length >= 8) {
+					html = "<span class='reg-pw-intensity gao'>高</span>";
+					obj.html(html);
+					return false;
+				}
+			}
+			//短信发送倒计时
+			function code_timeout(v) {
+				if(v > 0) {
+					$('.sendmsg').val((--v) + '秒后重发');
+					setTimeout(function() {
+						code_timeout(v)
+					}, 1000);
+				} else {
+					$('.sendmsg').val('重发验证码');
+					$('.sendmsg').attr("disabled", false);
+				}
+			}
+			//邮箱发送倒计时
+			function email_code_timeout(v) {
+				if(v > 0) {
+					$('.sendemail').val((--v) + '秒后重发');
+					setTimeout(function() {
+						email_code_timeout(v)
+					}, 1000);
+				} else {
+					$('.sendemail').val('重发验证码');
+					$('.sendemail').attr("disabled", false);
+				}
+			}
+		</script>
+		<link type="text/css" href="css/footer.css" rel="stylesheet">
+		<link type="text/css" href="css/skin.css" rel="stylesheet">
+		<div class="st-brand">
+			<div class="wm-1200">
+				<div class="st-serve">
+					<dl class="ico01 bor_0"> <dt></dt>
+						<dd> <em>阳光价格</em> <span>同类产品，保证低价</span> </dd>
+					</dl>
+					<dl class="ico02"> <dt></dt>
+						<dd> <em>阳光行程</em> <span>品质护航，透明公开</span> </dd>
+					</dl>
+					<dl class="ico03"> <dt></dt>
+						<dd> <em>阳光服务</em> <span>专属客服，快速响应</span> </dd>
+					</dl>
+					<dl class="ico04"> <dt></dt>
+						<dd> <em>救援保障</em> <span>途中意外，保证援助</span> </dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!--品牌介绍-->
+		<div class="st-help">
+			<div class="wm-1200">
+				<div class="help-lsit">
+					<dl> <dt><a href="http://www.situcms.com/help/index_16.html" rel="nofollow">参团信息</a></dt>
+						<dd>
+							<a href="http://www.situcms.com/help/show_7.html" target="_blank" rel="nofollow">确定参团人数</a>
+							<a href="http://www.situcms.com/help/show_1.html" target="_blank" rel="nofollow">什么是独立团</a>
+						</dd>
+					</dl>
+					<dl> <dt><a href="http://www.situcms.com/help/index_17.html" rel="nofollow">支付定金</a></dt>
+						<dd>
+							<a href="http://www.situcms.com/help/show_4.html" target="_blank" rel="nofollow">旅游为什么要支付定金</a>
+							<a href="http://www.situcms.com/help/show_3.html" target="_blank" rel="nofollow">游客如何支付定金</a>
+						</dd>
+					</dl>
+					<dl> <dt><a href="http://www.situcms.com/help/index_18.html" rel="nofollow">签订旅游合同</a></dt>
+						<dd>
+							<a href="http://www.situcms.com/help/show_6.html" target="_blank" rel="nofollow">是正规旅游合同吗？</a>
+							<a href="http://www.situcms.com/help/show_5.html" target="_blank" rel="nofollow">传真能签合同吗？</a>
+						</dd>
+					</dl>
+					<dl> <dt><a href="http://www.situcms.com/help/index_19.html" rel="nofollow">正式出团</a></dt>
+						<dd>
+							<a href="http://www.situcms.com/help/show_8.html" target="_blank" rel="nofollow">接客正式出团</a>
+							<a href="http://www.situcms.com/help/show_2.html" target="_blank" rel="nofollow">什么是纯玩团？</a>
+						</dd>
+					</dl>
+					<dl> <dt><a href="http://www.situcms.com/help/index_20.html" rel="nofollow">电话回访</a></dt>
+						<dd>
+							<a href="http://www.situcms.com/help/show_10.html" target="_blank" rel="nofollow">信件回访</a>
+							<a href="http://www.situcms.com/help/show_9.html" target="_blank" rel="nofollow">电话回访</a>
+						</dd>
+					</dl>
+					<div class="st-wechat">
+						<div class="pic"> <img class="fl" src="http://www.situcms.com/uploads/main/allimg/20160922/20160922170814_94x94.jpg"> </div> <span>微信扫一扫，<br>优惠多多！</span> </div>
+				</div>
+			</div>
+		</div>
+		<!--帮助 扫码-->
+		<div class="st-footer">
+			<div class="wm-1200">
+				<div class="st-foot-menu">
+					<a href="http://www.situcms.com/servers/index_1.html" target="_blank" rel="nofollow">关于我们</a>
+					<a href="http://www.situcms.com/servers/index_2.html" target="_blank" rel="nofollow">联系我们</a>
+					<a href="http://www.situcms.com/servers/index_8.html" target="_blank" rel="nofollow">我们的优势</a>
+					<a href="http://www.situcms.com/servers/index_4.html" target="_blank" rel="nofollow">支付方式</a>
+					<a href="http://www.situcms.com/servers/index_7.html" target="_blank" rel="nofollow">法律声明</a>
+				</div>
+				<!--底部导航-->
+				<div class="st-foot-edit">
+					<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="/include/slineeditor/php/../../../uploads/arcimgs73241402466888.jpg" title="1.jpg" alt="" style="float: none;"><img src="/include/slineeditor/php/../../../uploads/arcimgs59811402466888.jpg" title="2.jpg" alt="" style="float: none;"><br></p>蜀ICP备08009168号-10
+					<p>​<br></p>
+				</div>
+				<!--网站底部介绍-->
+				<div class="support">技术支持：
+					<a href="http://www.stourweb.com/" target="_blank">思途CMS</a>
+				</div>
+				<p>
+					<script>
+						var _hmt = _hmt || [];
+						(function() {
+							var hm = document.createElement("script");
+							hm.src = "//hm.baidu.com/hm.js?d7f82c70ba24c58dbd6b23553c88ed03";
+							var s = document.getElementsByTagName("script")[0];
+							s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+					<script type="text/javascript">
+						(function(m, ei, q, i, a, j, s) {
+							m[i] = m[i] || function() {
+								(m[i].a = m[i].a || []).push(arguments)
+							};
+							j = ei.createElement(q),
+								s = ei.getElementsByTagName(q)[0];
+							j.async = true;
+							j.charset = 'UTF-8';
+							j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+							s.parentNode.insertBefore(j, s);
+						})(window, document, 'script', '_MEIQIA');
+						_MEIQIA('entId', 107298);
+					</script>
+				</p>
+			</div>
+		</div>
+	</body>
+
+</html>

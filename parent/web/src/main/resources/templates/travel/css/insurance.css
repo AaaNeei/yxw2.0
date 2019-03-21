@@ -1,0 +1,120 @@
+.slide-wrapper{float:right;width:790px;height:286px;position:relative;overflow:hidden;background:#e7e7e7}.slide-wrapper .slide-bd{width:790px;height:286px;overflow:hidden}.slide-wrapper .slide-bd>ul>li>a{display:table-cell;width:790px;height:286px;vertical-align:middle;text-align:center}.slide-wrapper .slide-bd > ul > li > a
+img{vertical-align:middle}.slide-wrapper .slide-hd{width:100%;height:16px;position:absolute;bottom:20px;z-index:99;text-align:right}.slide-wrapper .slide-hd>ul{height:16px;padding:0
+30px}.slide-wrapper .slide-hd>ul>li{color:#fff;display:inline-block;width:16px;height:16px;line-height:16px;margin:0
+3px;cursor:pointer;text-align:center;vertical-align:top;font-size:13px;background:#092a3d}.slide-wrapper .slide-hd>ul>li.on{background:#eb6100}.search-area{float:left;width:390px}.search-bar{color:#fff;height:46px;line-height:46px;padding:0
+20px;font-size:20px;border-top-left-radius:5px;border-top-right-radius:5px;background:#00b7ee}.search-bar
+.icon{display:inline-block;width:18px;height:20px;vertical-align:middle;margin:-3px 10px 0 0;background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat -22px 0}.search-wrap{padding:30px;border:4px
+solid #00b7ee;border-top:0}.type-bar{height:34px;margin-bottom:12px}.type-bar>dt{float:left;width:60px;height:34px;line-height:34px;padding-right:10px;text-align:right;font-size:14px}.type-bar>dd{height:34px;padding-left:70px}.mdd-text{display:block;width:100%;height:34px;line-height:34px;padding:0
+10px;border:1px
+solid #d1d1d1;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.drop-wrap{height:34px;position:relative}.drop-wrap .drop-hd{display:block;height:34px;position:relative;cursor:pointer;border:1px
+solid #d1d1d1;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.drop-wrap .drop-hd .drop-val{color:#ccc;display:block;height:32px;line-height:32px;padding:0
+10px;font-size:14px}.drop-wrap .drop-hd .arrow-icon{display:inline-block;width:11px;height:6px;position:absolute;top:14px;right:10px;background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat 0 -10px}.drop-wrap.open .drop-hd .arrow-icon{background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat 0 -19px}.drop-wrap .drop-bd{display:none;max-height:150px;position:absolute;top:33px;left:0;right:0;z-index:999;overflow-y:auto;border:1px
+solid #d1d1d1;background:#fff}.drop-wrap .drop-bd::-webkit-scrollbar{width:3px}.drop-wrap .drop-bd::-webkit-scrollbar-button{height:0;background:#fff}.drop-wrap .drop-bd::-webkit-scrollbar-track{height:0;background:#fff}.drop-wrap .drop-bd::-webkit-scrollbar-thumb{background:#ddd}.drop-wrap .drop-bd>li{height:30px;line-height:30px;padding:0
+10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;cursor:pointer;font-size:14px}.drop-wrap .drop-bd>li:hover{background:#f7f7f7}.mdd-col-bar{height:34px;position:relative}.mdd-city-box{display:none;position:absolute;left:0;top:34px;z-index:9999;width:448px;padding:5px
+10px;border:1px
+solid #d2d2d2;background:#fff}.mdd-city-box .ss-mdd-tit{float:left;width:448px;height:30px}.mdd-city-box .ss-mdd-tit
+span{color:#333;float:left;height:30px;line-height:30px}.mdd-city-box .ss-mdd-tit
+i{float:right;width:10px;height:30px;cursor:pointer;transition:all 0.3s;-webkit-transition:all 0.3s;-o-transition:all 0.3s;-moz-transition:all 0.3s;background:url(/plugins/insurance/public/images/st-h-search-ico.png) center no-repeat}.mdd-city-box .ss-mdd-tit i:hover{transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg)}.mdd-city-box .ss-mdd-box{float:left;width:448px;margin-top:5px}.mdd-city-box .ss-mdd-box .st-tabnav{float:left;width:448px;height:27px}.mdd-city-box .ss-mdd-box .st-tabnav
+span{float:left;color:#7d7d7d;width:55px;height:27px;line-height:27px;text-align:center;cursor:pointer;margin-right:1px;background:#eee}.mdd-city-box .ss-mdd-box .st-tabnav
+span.on{color:#fff;background:#00b7ee}.mdd-city-box .ss-mdd-box .st-tabcon{float:left;width:448px;margin-top:5px}.mdd-city-box .ss-mdd-box .st-tabcon
+a{float:left;width:64px;height:24px;line-height:24px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.search-btn{color:#fff;display:inline-block;width:252px;height:38px;line-height:38px;margin-left:70px;text-align:center;font-size:16px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#00b7ee}.st-container{margin-top:20px}.st-title-bar{height:40px;border-bottom:1px solid #e6e6e6}.st-title-bar .col-tit{color:#00b7ee;display:inline-block;height:40px;line-height:40px;font-size:18px;font-weight:bold}.st-title-bar
+.more{float:right;height:40px;line-height:40px;font-size:14px}.st-title-bar .more:hover{color:#f80}.st-title-bar .more
+.icon{display:inline-block;width:11px;height:11px;vertical-align:middle;margin:-3px 5px 0 0;background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat -22px -51px}.st-title-bar .more:hover
+.icon{background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat -22px -30px}.ins-block-list>li{float:left;width:370px;height:398px;padding:6px;margin:24px
+24px 0 0;border:1px
+solid #eee}.ins-block-list>li.mr_0{margin-right:0}.ins-block-list .item-pic{display:table-cell;width:370px;height:246px;text-align:center;vertical-align:middle;position:relative;background:#e7e7e7}.ins-block-list .item-pic
+.img{max-width:100%;max-height:100%;vertical-align:middle}.ins-block-list .item-pic
+.bt{color:#fff;display:block;height:40px;line-height:40px;padding:0
+15px;text-align:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;position:absolute;right:0;bottom:0;left:0;font-size:16px;background:#ccc;background:rgba(0,0,0,.4)}.ins-block-list .item-info{padding:10px
+14px}.ins-block-list .item-info .term-f{height:30px;line-height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px}.ins-block-list .item-info .term-s{height:40px;line-height:20px;margin-top:5px;overflow:hidden;font-size:14px}.ins-block-list .item-info .term-t{margin-top:25px}.ins-block-list .item-info .term-t
+.price{color:#fc6000;display:inline-block;height:30px;line-height:30px;font-size:14px}.ins-block-list .item-info .term-t .price
+em{font-size:20px}.ins-block-list .item-info .term-t .show-link{color:#fff;float:right;width:96px;height:30px;line-height:30px;text-align:center;font-size:14px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-transition:background .3s;-moz-transition:background .3s;-o-transition:background .3s;transition:background .3s;background:#ff8a00}.ins-block-list .item-info .term-t .show-link:hover{background:#f60}.insurance-step-wrap{height:140px;margin:50px
+0 30px;background:url("/plugins/insurance/public/images/ins-step-pic.png") center no-repeat}.search-type-block{border:1px
+solid #ebebeb;background:#fff}.search-type-item{border-bottom:1px solid #ebebeb}.search-type-item .item-hd{float:left;color:#666;width:90px;height:24px;line-height:24px;padding:10px
+10px 10px 0;text-align:right}.search-type-item .item-bd{padding:0
+0 0 100px}.item-check{height:44px;padding:0
+20px}.item-check .chick-child{float:left;color:#fff;height:24px;line-height:24px;padding:0
+8px;margin:10px
+10px 0 0;background:#00b7ee}.item-check .chick-child
+.closed{display:inline-block;width:8px;height:8px;vertical-align:middle;margin:-3px 0 0 6px;background:url("/plugins/insurance/public/images/st-line-ico.png") no-repeat 0 0}.item-check .clear-item{float:left;height:24px;line-height:24px;margin-top:10px}.item-child{}.item-child:after,.child-list:after{content:"";display:block;height:0;clear:both;overflow:hidden}.child-block{height:43px;margin:0
+20px;overflow:hidden;position:relative}.item-child .all-link{float:left;height:24px;line-height:24px;padding:0
+10px;margin:10px
+20px 0 0}.child-list{height:34px;padding:10px
+84px 0 0}.child-list>a{float:left;height:24px;line-height:24px;padding:0
+10px;margin:0
+20px 10px 0}.item-child .all-link:hover,
+.child-list > a:hover,
+.item-child
+.active{color:#fff;background:#00b7ee}.arrow{display:block;color:#999;height:24px;line-height:24px;position:absolute;right:0;top:10px}.arrow:after{content:"";display:inline-block;width:0;height:0;vertical-align:middle;margin:-2px 0 0 5px;border-left:4px solid transparent;border-right:4px solid transparent}.arrow.down:after{border-bottom:4px solid #999}.arrow.up:after{border-top:4px solid #999}.search-type-item.term{background:#f8f8f8}.search-type-item.last{border-bottom:0}.ins-list-container{margin-top:20px}.ins-list-wrapper{}.ins-list-wrapper>li{padding:9px;margin-bottom:10px;border:1px
+solid #ebebeb;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}.ins-list-wrapper>li:hover{border:1px
+solid #00b7ee}.ins-list-wrapper .item-l{float:left;width:272px;height:185px}.ins-list-wrapper .item-l
+.pic{display:table-cell;width:272px;height:185px;text-align:center;vertical-align:middle;background:#e7e7e7}.ins-list-wrapper .item-l .pic
+img{max-width:272px;max-height:185px;vertical-align:middle}.ins-list-wrapper .item-m{float:left;width:710px;margin-left:30px}.ins-list-wrapper .item-m
+.name{display:block;height:34px;line-height:34px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:16px}.ins-list-wrapper .item-m .name:hover{color:#f60}.ins-list-wrapper .item-m .name
+img{margin:-3px 0 0 5px;vertical-align:middle;max-height:16px}.ins-list-wrapper .item-m
+.attr{height:20px;overflow:hidden;margin:5px
+0 8px;font-size:0}.ins-list-wrapper .item-m .attr
+em{color:#ff8a00;display:inline-block;height:18px;line-height:19px;padding:0
+3px;margin-right:6px;font-size:12px;border:1px
+solid #ff8a00;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#fff}.ins-list-wrapper .item-m
+.term{height:20px;line-height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ins-list-wrapper
+.type{height:72px;margin-top:5px;overflow:hidden}.ins-list-wrapper .type
+li{float:left;width:220px;height:24px;margin-right:16px}.ins-list-wrapper .type li:before{content:"";display:inline-block;width:0;height:12px;vertical-align:top;margin:6px
+6px 0 0;border-left:2px solid #00b7ee}.ins-list-wrapper .type li
+.bt{display:inline-block;width:140px;height:24px;line-height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ins-list-wrapper .type li
+.num{float:right;height:24px;line-height:24px;text-align:right}.ins-list-wrapper .item-r{float:right;width:120px;text-align:center}.ins-list-wrapper .item-r
+.jg{color:#f60;display:block;margin-top:25px}.ins-list-wrapper .item-r .jg
+em{font-size:20px}.ins-list-wrapper .item-r .bm-btn{color:#fff;display:inline-block;width:86px;height:26px;line-height:26px;margin-top:80px;font-size:14px;text-align:center;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f60}.ins-hd-container{padding:19px;border:1px
+solid #ebebeb}.ins-info-l{float:left;width:420px}.ins-info-l
+.pic{display:table-cell;width:420px;height:285px;vertical-align:middle;text-align:center;background:#e7e7e7}.ins-info-l .pic
+img{max-width:100%;max-height:100%;vertical-align:middle}.ins-item-block{margin-top:10px}.ins-item-block
+li{}.ins-item-block li:after{content:"";clear:both;display:block;height:0;overflow:hidden}.ins-item-block li .item-hd{float:left;color:#666;width:90px;height:30px;line-height:30px;text-align:right;font-size:14px}.ins-item-block li .item-bd{min-height:30px;line-height:30px;padding-left:90px;font-size:14px}.ins-item-block li .item-bd .msg-txt{color:#666;display:inline-block}.jf-type-wrap{display:inline-block;height:19px;vertical-align:middle;margin-right:5px;position:relative;cursor:pointer}.jf-type-wrap
+.num{display:inline-block;color:#ff9b3a;height:19px;line-height:19px;padding-left:24px;vertical-align:top;font-size:12px}.jf-type-wrap
+.di{background:url("/plugins/insurance/public/images/ls-icobg.png") no-repeat 0 -269px}.jf-type-wrap
+.ding{background:url("/plugins/insurance/public/images/ls-icobg.png") no-repeat 0 -307px}.jf-type-wrap
+.ping{background:url("/plugins/insurance/public/images/ls-icobg.png") no-repeat 0 -383px}.jf-type-wrap .num
+i{float:right;width:5px;height:19px;background:url("/plugins/insurance/public/images/ls-icobg.png") no-repeat right -288px}.jf-type-wrap
+.info{display:none;width:186px;position:absolute;left:50%;bottom:30px;padding:5px
+8px;margin-left:-102px;border:1px
+solid #ccc;font-size:12px;background:#fff}.jf-type-wrap .info
+.tit{display:block;height:24px;line-height:24px;font-weight:bold}.jf-type-wrap .info
+.txt{color:#666;display:block;line-height:18px;margin-top:2px}.jf-type-wrap .info .txt:after{content:"";display:block;width:16px;height:8px;position:absolute;left:50%;bottom:-8px;margin-left:-8px;background:url("/plugins/insurance/public/images/ls-icobg.png") no-repeat right 0}.ins-info-r{float:right;width:715px}.ins-tit-bar{line-height:30px;font-size:20px}.ins-tit-bar
+img{vertical-align:middle;margin:-3px 0 0 5px;max-height:20px}.ins-info-r .ins-item-block li .item-hd{width:80px;text-align:left}.ins-info-r .ins-item-block li .item-bd{padding-left:80px}.ins-type-item{min-height:30px}.ins-type-item:after{content:"";clear:both;display:block;height:0;overflow:hidden}.ins-type-item>a{float:left;color:#666;height:28px;line-height:28px;padding:0
+9px;margin:0
+10px 10px 0;position:relative;border:1px
+solid #e6e6e6;font-size:14px}.ins-type-item>a.on,.ins-type-item>a:hover{border:1px
+solid #f60}.ins-type-item>a.on:after{content:"";display:block;width:12px;height:12px;position:absolute;right:0;bottom:0;background:url("/plugins/insurance/public/images/insurance-col-icon.png") no-repeat 0 -61px}.ins-pay-type{float:left;margin:0
+5px 5px 0}.ins-info-r .ins-date-item,
+.ins-info-r .amount-opt-wrap{margin-bottom:10px}.ins-booking-bar{padding-top:25px}.ins-booking-bar
+.price{color:#666;float:left;height:38px;line-height:38px;font-size:14px}.ins-booking-bar .price>strong{color:#fc6000}.ins-booking-bar .price>strong>em{font-size:24px;font-family:Arial,"宋体","Microsoft YaHei",Helvetica,sans-serif}.ins-booking-bar .pay-link{float:right;color:#fff;width:120px;height:38px;line-height:38px;text-align:center;font-size:16px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:background .3s;-moz-transition:background .3s;-o-transition:background .3s;transition:background .3s;background:#ff8a00}.ins-booking-bar .pay-link:hover{background:#f60}.ins-show-container{margin-top:20px}.ins-bar-fix{height:50px}.ins-show-bar{width:1198px;height:47px;border:1px
+solid #ededed;border-bottom:2px solid #00b7ee;background:#fff}.ins-show-bar
+span{float:left;color:#666;height:47px;line-height:47px;padding:0
+20px;margin-left:-1px;margin-top:-1px;cursor:pointer;border:1px
+solid #ededed;border-bottom:0;font-size:16px}.ins-show-bar span:hover{border-bottom:0;position:relative;z-index:99;background:#f5f5f5}.ins-show-bar
+span.on{color:#fff;border:1px
+solid #00b7ee;border-bottom:0;background:#00b7ee}.fxd{position:fixed;top:0;z-index:999}.ins-show-wrap{border:1px
+solid #e6e6e6;border-top:0}.ins-show-block{padding:20px
+29px 0}.ins-show-block .col-bar{height:36px;line-height:36px;border-bottom:1px solid #e5e5e5;font-size:18px}.ins-show-block .col-box{padding:20px
+0 10px}.ins-show-block .txt-wrapper{color:#666;line-height:24px;font-size:14px}.ins-type-table{width:100%}.ins-table-list{width:100%}.ins-table-list
+th{color:#666;height:36px;line-height:36px;padding:0
+20px;font-weight:bold;border:1px
+solid #eaeaea;background:#f6f6f6}.ins-table-list
+td{height:60px;border:1px
+solid #eaeaea}.ins-table-list
+.name{line-height:18px;padding:0
+20px}.ins-table-list
+.price{display:inline-block;padding:0
+20px}.st-comm-introduce{float:none !important}.seo-content-box{padding:10px
+20px;margin-bottom:15px;border:1px
+solid #d8d8d8;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f5f5f5}.seo-content-box .seo-bar{padding:5px
+0}.seo-content-box .seo-bar .seo-title{color:#00b7ee;font-size:18px;font-weight:bold}.seo-content-box .seo-wrapper{padding:5px
+0}.seo-content-box .seo-wrapper
+*{max-width:100%}.seo-content-box .seo-wrapper
+strong{font-weight:bold !important}.seo-content-box .seo-wrapper i,
+.seo-content-box .seo-wrapper
+em{font-style:italic !important}.seo-content-box .seo-wrapper
+a{color:#0082dd}.seo-content-box .seo-wrapper a:hover{color:#ff8a00;text-decoration:underline}.seo-content-box .seo-wrapper table,
+.seo-content-box .seo-wrapper th,
+.seo-content-box .seo-wrapper
+td{border:1px
+solid #e5e5e5}

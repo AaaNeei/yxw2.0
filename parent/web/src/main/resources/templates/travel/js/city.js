@@ -1,0 +1,7 @@
+$(function(){$.getJSON(SITEURL+'common/city/ajax_get_city',{},function(data){$('#current_city').text(data.city);})
+$(".head_start_city").hover(function(){$(this).addClass("change_tab");},function(){$(this).removeClass("change_tab");});$('.st-local-city').delegate('.city-item','click',function(){var url=$(this).attr('data-url');var city=$(this).attr('data-city');$.post(SITEURL+'common/city/ajax_set_city',{city:city},function(){if(url){window.location.href=url;}else{$('.searchkeyword').val(city);$('.st-btn').trigger('click');}});})
+$('#city_search_txt').keyup(function(){var url=SITEURL+'common/city/ajax_search_city';var keyword=$(this).val();if(keyword!=''){$.ajax({type:'POST',url:url,dataType:'json',data:{keyword:keyword},success:function(data){var html='';if(data.status){$.each(data.list,function(i,obj){var u='';if(obj.iswebsite==1){u=' data-url="'+obj.weburl+'"';}
+html+='<a class="city-item" href="javascript:void(0)"'+u+' data-city="'+obj.kindname+'">'+obj.kindname+'</a>';})}else{html=' <p class="no_result">对不起，暂时没有找到结果</p>';}
+$('.station_search_result').html(html);}})}})
+$('#tags').find('li').click(function(){$(this).addClass('selectTag').siblings().removeClass('selectTag');var contain=$(this).data('contain');$('.tagContent').hide();$('#'+contain).show();})
+$('#tags').find('li:first').trigger('click');})

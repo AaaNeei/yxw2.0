@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yxw.web.mapper.CityMapper">
+   <resultMap id="CityResultMap" type="com.yxw.web.entity.City">
+        <id column="city_id" property="cityId" jdbcType="INTEGER"/>
+        <result column="city_name" property="cityName" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="city_num" property="cityNum" jdbcType="INTEGER"/>
+        <result column="province_num" property="provinceNum" jdbcType="INTEGER"/>
+
+    </resultMap>
+    <insert id="insert" parameterType="com.yxw.web.entity.City">
+        insert into yxw_city
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            city_id,
+            city_name ,
+            city_num,
+            province_num
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            null,
+            #{cityName},
+            #{cityNum},
+            #{provinceNum}
+        </trim>
+
+    </insert>
+    <!--        selectCityNum-->
+
+    <select id="selectCityNum" resultMap="CityResultMap">
+        select * from yxw_city where city_name=#{cityName}
+    </select>
+</mapper>
