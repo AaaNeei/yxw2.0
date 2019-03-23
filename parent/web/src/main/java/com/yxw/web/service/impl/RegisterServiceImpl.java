@@ -1,6 +1,7 @@
 package com.yxw.web.service.impl;
 
 import com.yxw.web.entity.MobileCode;
+import com.yxw.web.entity.enumEntity.RedisKeyName;
 import com.yxw.web.mapper.SmsMapper;
 import com.yxw.web.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +35,8 @@ public class RegisterServiceImpl implements RegisterService {
         Integer resultCode = smsMapper.sendMessageDev(mobileCode);
         if (resultCode > 0) {
             //手机验证码发送成功。验证码存入Redis缓存
-            redisTemplate.opsForValue().set("yxw_sms_code_dev:" + stuMobile, code);
-            redisTemplate.expire("yxw_sms_code_dev:" + stuMobile, 10, TimeUnit.MINUTES);
-            System.out.println("已发送至：" + stuMobile + "，验证码：" + redisTemplate.opsForValue().get("yxw_sms_code_dev:" + stuMobile));
+            redisTemplate.opsForValue().set(RedisKeyName.YXW_SMS_CODE_DEV + stuMobile, code, 10, TimeUnit.MINUTES);
+            System.out.println("已发送至：" + stuMobile + "，验证码：" + redisTemplate.opsForValue().get(RedisKeyName.YXW_SMS_CODE_DEV + stuMobile));
             return "1";
         }
         return "0";

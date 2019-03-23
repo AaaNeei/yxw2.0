@@ -95,6 +95,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!-- 分页插件 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -124,7 +129,6 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
-
 
 
     </dependencies>

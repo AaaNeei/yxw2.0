@@ -1,7 +1,9 @@
 package com.yxw.web.controller;
 
 import com.yxw.web.entity.Student;
+import com.yxw.web.entity.enumEntity.RedisKeyName;
 import com.yxw.web.service.LoginService;
+import com.yxw.web.utils.EncodeAndDecode;
 import com.yxw.web.utils.security.Base64Utils;
 import com.yxw.web.utils.security.MD5Util;
 import com.yxw.web.utils.security.RSAUtils;
@@ -38,43 +40,17 @@ public class LoginController {
     private RedisTemplate redisTemplate;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginView(Model model) {
-        String publicKey = "";
-        try {
-            //获取公钥
-            Map<String, Object> keyMap = RSAUtils.genKeyPair();
-            publicKey = RSAUtils.getPublicKey(keyMap);
-            redisTemplate.opsForValue().set("login_privateKey_yxw", RSAUtils.getPrivateKey(keyMap));
-        } catch (Exception e) {
-
-        }
+    public String loginView(Model model, HttpServletRequest request) {
+        String publicKey = new EncodeAndDecode().getPublicKey(redisTemplate, request, RedisKeyName.YXW_PRIVATEKEY_LOGIN);
         model.addAttribute("publicKey", publicKey);
-        return "/page_login";
+        return "/login";
     }
 
 
     @RequestMapping(value = "/loginIn", method = RequestMethod.POST)
     public String login(Student student, String remember, Model model, HttpServletRequest request) {
         String remember2 = request.getParameter("remember");
-        //获取私钥
-        String privateKey = (String) redisTemplate.opsForValue().get("login_privateKey_yxw");
-        //获取之后及时删除缓存
-        redisTemplate.delete("login_privateKey_yxw");
-        String username = student.getStuUsername();
-        String password = student.getStuPassword();
-        password = password.replaceAll("%2B", "+");
-        //解密后的密码
-        String decodePassword = "";
-        try {
-            byte[] decryptByPrivateKey = RSAUtils.decryptByPrivateKey(Base64Utils.decode(password), privateKey);
-            decodePassword = new String(decryptByPrivateKey);
-        } catch (Exception e) {
-            //后期要全局日志补货
-        }
-        //后端用MD5再次 加盐加密 存储数据库
-        password = MD5Util.encode(decodePassword);
-        student.setStuPassword(password);
-        Student studentRes = loginService.login(student);
+        Student studentRes = loginService.login(student, request);
         if (studentRes != null) {
             request.getSession().setAttribute("student", studentRes);
             model.addAttribute("student", studentRes);

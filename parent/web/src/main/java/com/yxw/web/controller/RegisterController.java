@@ -5,10 +5,12 @@ import com.yxw.sms.service.SmsService;
 import com.yxw.web.entity.Province;
 import com.yxw.web.entity.School;
 import com.yxw.web.entity.Student;
+import com.yxw.web.entity.enumEntity.RedisKeyName;
 import com.yxw.web.service.ProvinceService;
 import com.yxw.web.service.RegisterService;
 import com.yxw.web.service.SchoolService;
 import com.yxw.web.service.StudentService;
+import com.yxw.web.utils.EncodeAndDecode;
 import com.yxw.web.utils.security.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -53,15 +55,6 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String registerView(Model model, HttpServletRequest request) {
-
-        //查询所有省信息
-        List<Province> provinceList = provinceService.selectAllProvince();
-        model.addAttribute("provinceList", provinceList);
-
-        return "/page_registration";
-    }
 
     /**
      * 发送短信
@@ -85,6 +78,8 @@ public class RegisterController {
     }
 
     /**
+     * 根据省份编号获取所在省份高校
+     *
      * @param provinceNum
      * @return
      */
@@ -97,17 +92,41 @@ public class RegisterController {
         return schoolList;
     }
 
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerView(Model model, HttpServletRequest request) {
+
+        /*//查询所有省信息
+        List<Province> provinceList = provinceService.selectAllProvince();
+        model.addAttribute("provinceList", provinceList);*/
+        String publicKey = new EncodeAndDecode().getPublicKey(redisTemplate, request, RedisKeyName.YXW_PRIVATEKEY_REGISTER);
+        model.addAttribute("publicKey", publicKey);
+
+        return "/register";
+    }
+
+    /**
+     * 注册提交数据
+     *
+     * @param model
+     * @param student
+     * @param stuMobileCode
+     * @return
+     */
     @RequestMapping(value = "/registerIn", method = RequestMethod.POST)
-    public String register(Model model, Student student, @RequestParam(value = "stuMobileCode") String stuMobileCode) {
+    public String register(Model model, Student student, HttpServletRequest request, @RequestParam(value = "stuMobileCode") String stuMobileCode) {
+
+
         System.out.print("----------注册数据提交");
-        String mobileCode = (String) redisTemplate.opsForValue().get("yxw_sms_code_dev:" + student.getStuMobile());
+        String mobileCode = (String) redisTemplate.opsForValue().get(RedisKeyName.YXW_SMS_CODE_DEV + student.getStuMobile());
+        redisTemplate.delete(RedisKeyName.YXW_SMS_CODE_DEV + student.getStuMobile());
         if (!StringUtils.pathEquals(stuMobileCode, mobileCode)) {
             model.addAttribute("msg", "手机验证码不一致!");
             return "/error";
         }
-        student.setStuPassword(MD5Util.encode(student.getStuPassword()));
-        studentService.addUser(student);
-        return "/login";
+        studentService.addUser(student, request);
+        model.addAttribute("flag", "success");
+        return "/page_search";
     }
 
     @ResponseBody

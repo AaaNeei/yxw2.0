@@ -1,9 +1,12 @@
 package com.yxw.web.config;
 
+import com.yxw.web.interceptor.ErrorPageInterceptor;
 import com.yxw.web.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -24,11 +27,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private LoginInterceptor loginInterceptor;
+    @Autowired
+    private ErrorPageInterceptor errorPageInterceptor;
 
     /**
      * 不需要登录拦截的url:登录注册和验证码
      */
-    final String[] notLoginInterceptPaths = {"/img/**","/loginIn", "/bootstrap/**", "/js/**", "/css/**", "/login", "/index", "/register", "/top", "/footer", "/login/**", "/index/**", "/register/**", "/kaptcha.jpg/**", "/kaptcha/**"};
+    final String[] notLoginInterceptPaths = {"/img/**", "/loginIn", "/bootstrap/**", "/js/**", "/css/**", "/login", "/index", "/register", "/top", "/footer", "/login/**", "/index/**", "/register/**", "/kaptcha.jpg/**", "/kaptcha/**"};
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -36,6 +41,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         //registry.addInterceptor(logInterceptor).addPathPatterns("/**");
         // 登录拦截器
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns(notLoginInterceptPaths);
+        //错误页面拦截
+        registry.addInterceptor(errorPageInterceptor);
+
+
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.yxw.web.service;
 
 import com.yxw.web.entity.Student;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 
 public interface StudentService {
-    int addUser(Student student);
+    int addUser(Student student, HttpServletRequest request);
 
     List<Student> findAllUser(int pageNum, int pageSize);
 

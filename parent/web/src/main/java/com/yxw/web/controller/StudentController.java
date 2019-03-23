@@ -30,12 +30,6 @@ public class StudentController {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @ResponseBody
-    @RequestMapping(value = "/add", produces = {"application/json;charset=UTF-8"})
-    public int addUser(Student student) {
-        student.setCreateTime(new Date());
-        return studentService.addUser(student);
-    }
 
     @ResponseBody
     @RequestMapping(value = "/all/{pageNum}/{pageSize}", produces = {"application/json;charset=UTF-8"})
