@@ -1,9 +1,11 @@
 package com.yxw.web.controller;
 
 import com.yxw.web.entity.Student;
+import com.yxw.web.entity.enumEntity.CookieName;
 import com.yxw.web.entity.enumEntity.RedisKeyName;
 import com.yxw.web.service.LoginService;
 import com.yxw.web.utils.EncodeAndDecode;
+import com.yxw.web.utils.cookie.CookieUtils;
 import com.yxw.web.utils.security.Base64Utils;
 import com.yxw.web.utils.security.MD5Util;
 import com.yxw.web.utils.security.RSAUtils;
@@ -18,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,23 +50,31 @@ public class LoginController {
         return "/login";
     }
 
-
+    @ResponseBody
     @RequestMapping(value = "/loginIn", method = RequestMethod.POST)
-    public String login(Student student, String remember, Model model, HttpServletRequest request) {
+    public Integer login(Student student, String remember, Model model, HttpServletRequest request, HttpServletResponse response) {
         String remember2 = request.getParameter("remember");
         Student studentRes = loginService.login(student, request);
         if (studentRes != null) {
             request.getSession().setAttribute("student", studentRes);
+           /* CookieUtils.addCookie(response, MD5Util.encode(CookieName.YXW_LOGIN_COOKIE_NAME), MD5Util.encode(studentRes.getStuUsername()));
+            CookieUtils.addCookie(response, MD5Util.encode(CookieName.YXW_LOGIN_COOKIE_PWD), MD5Util.encode(studentRes.getStuPassword()));
+*/
+            //登录用户存到缓存 初步实现共享
+            redisTemplate.opsForValue().set(RedisKeyName.YXW_LOGIN_STUDENT + request.getSession().getId(), studentRes);
             model.addAttribute("student", studentRes);
-            return "/index";
+            return 1;
         }
-        return "/error";
+        return 0;
     }
 
     @RequestMapping(value = "/loginOut")
-    public String loginOut(HttpServletRequest request) {
+    public String loginOut(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().removeAttribute("student");
-
+        /*CookieUtils.delCookie(response, MD5Util.encode(CookieName.YXW_LOGIN_COOKIE_NAME));
+        CookieUtils.delCookie(response, MD5Util.encode(CookieName.YXW_LOGIN_COOKIE_PWD));
+       */
+        redisTemplate.delete(RedisKeyName.YXW_PRIVATEKEY_LOGIN + request.getSession().getId());
         return "/index";
     }
 

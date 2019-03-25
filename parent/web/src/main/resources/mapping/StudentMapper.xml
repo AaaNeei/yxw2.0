@@ -59,7 +59,7 @@
         )
         values (null, #{stuName,jdbcType=VARCHAR}, #{stuSex,jdbcType=CHAR},
         #{stuAge,jdbcType=INTEGER},#{stuAddr,jdbcType=VARCHAR},#{stuHobbies,jdbcType=VARCHAR},
-        #{createTime,jdbcType=DATE},#{stuUsername,jdbcType=VARCHAR},#{stuPassword,jdbcType=VARCHAR},
+        #{createTime},#{stuUsername,jdbcType=VARCHAR},#{stuPassword,jdbcType=VARCHAR},
         #{comment,jdbcType=VARCHAR},#{schoolId,jdbcType=INTEGER},#{stuCredits,jdbcType=INTEGER},
         #{stuMobile,jdbcType=VARCHAR},#{stuNum,jdbcType=INTEGER},#{updateTime,jdbcType=DATE},
         #{stuEmil,jdbcType=VARCHAR}
@@ -83,6 +83,9 @@
             </if>
             <if test="stuHobbies != null">
                 stu_hobbies,
+            </if>
+            <if test="createTime != null">
+                create_time,
             </if>
             -- create_time,
             <if test="stuUsername != null">
@@ -127,6 +130,9 @@
             </if>
             <if test="stuHobbies != null">
                 #{stuHobbies,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
             </if>
             <if test="stuUsername != null">
                 #{stuUsername,jdbcType=VARCHAR},

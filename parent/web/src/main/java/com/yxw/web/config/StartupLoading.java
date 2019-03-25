@@ -38,7 +38,7 @@ public class StartupLoading implements CommandLineRunner {
     public void run(String... var1) throws Exception {
 
 
-        log.info("------------------项目启动,开始加载相关数据到redis缓存");
+       /* log.info("------------------项目启动,开始加载相关数据到redis缓存");
         List<Province> yxw_provinceList_v01 = redisTemplate.opsForList().range("yxw_provinceList_v01", 0, -1);
         if (yxw_provinceList_v01 == null || yxw_provinceList_v01.isEmpty()) {
             //省份信息存入缓存,如果不存在的情况下
@@ -48,9 +48,9 @@ public class StartupLoading implements CommandLineRunner {
         }
         log.info("------------------province从缓存读取");
         //所有高校信息存入缓存
-       /* List<School> schoolList = schoolService.getSchoolAll();
+       *//* List<School> schoolList = schoolService.getSchoolAll();
        //数据量过大,redis只能存储1000个school对象就结束.....
-        redisTemplate.opsForList().rightPushAll("yxw_shcoolList_v01",schoolList);*/
+        redisTemplate.opsForList().rightPushAll("yxw_shcoolList_v01",schoolList);*//*
 
         Map<String, List<School>> schoolAllByProvince = redisTemplate.opsForHash().entries("schoolAllByProvince");
         if (schoolAllByProvince.isEmpty()) {
@@ -60,7 +60,7 @@ public class StartupLoading implements CommandLineRunner {
         }
         log.info("------------------province_school从缓存读取");
         log.info("------------------相关数据加载完成");
-
+*/
 
     }
 

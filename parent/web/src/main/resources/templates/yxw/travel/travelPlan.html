@@ -17,6 +17,7 @@
     <meta name="author" content=""/>
 
     <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="/assets/css/headers/header1.css"/>
     <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/assets/css/style.css"/>
     <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap-responsive.min.css"/>
@@ -25,29 +26,22 @@
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="/assets/plugins/countdown/css/countdown.css"/>
+    <link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css" type="text/css" media="screen"/>
+
     <!-- CSS Theme -->
     <link rel="stylesheet" href="/assets/css/themes/default.css" id="style_color"/>
+    <link rel="stylesheet" href="/assets/css/themes/headers/default.css" id="style_color-header-1"/>
+
     <!--<link rel="stylesheet" href="/assets/css/themes/headers/default.css" id="style_color-header-1" />-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 
-<body class="coming-soon-page">
-<!--=== Style Switcher ===-->
-<i class="style-switcher-btn icon-cogs"></i>
-<div class="style-switcher">
-    <div class="theme-close"><i class="icon-remove"></i></div>
-    <div class="theme-heading">Theme Colors</div>
-    <ul class="unstyled">
-        <li class="theme-default theme-active" data-style="default" data-header="light"></li>
-        <li class="theme-blue" data-style="blue" data-header="light"></li>
-        <li class="theme-orange" data-style="orange" data-header="light"></li>
-        <li class="theme-red" data-style="red" data-header="light"></li>
-        <li class="theme-light" data-style="light" data-header="light"></li>
-    </ul>
-    <div class="coming-soon-logo"><a href="../index.html"><img src="/assets/img/logo2-default.png" width="71" heigt="26"
-                                                               alt=""/></a></div>
-</div><!--/style-switcher-->
-<!--=== End Style Switcher ===-->
+<body >
+
+<!--top 引入-->
+<div th:include="top::top"></div>
+
+
 
 <div class="coming-soon-border"></div>
 
@@ -94,18 +88,20 @@
     </div>
 </div><!--/container-->
 <!--=== End Content Part ===-->
-
+<!--footer 引入-->
+<div th:include="footer::footer"></div>
 <!-- JS Global Compulsory -->
 <script type="text/javascript" src="/assets/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="/assets/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
 <script type="text/javascript" src="/assets/plugins/countdown/jquery.countdown.js"></script>
+<script type="text/javascript" src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="/assets/plugins/backstretch/jquery.backstretch.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
 <!-- JS Page Level -->
 <script type="text/javascript" src="/assets/js/app.js"></script>
-
+<script type="text/javascript" src="/assets/js/pages/contact.js"></script>
 <script>
     $.backstretch([
         "/assets/img/bg/1.png",
@@ -129,6 +125,8 @@
 <script type="text/javascript">
     jQuery(document).ready(function () {
         App.init();
+       /* App.initSliders();
+        Contact.initMap();*/
     });
 </script>
 <!--[if lt IE 9]>

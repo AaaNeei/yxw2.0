@@ -24,7 +24,7 @@ public class ScheduledController {
     private static final Logger logger = LoggerFactory.getLogger(ScheduledController.class);
 
     // 每天早八点到晚八点，间隔5分钟执行任务
-    @Scheduled(cron = "0 0/5 8-20 * * ?")
+    //@Scheduled(cron = "0 0/5 8-20 * * ?")
     public void executeUploadTask() {
 
         // 间隔5分钟,执行工单上传任务

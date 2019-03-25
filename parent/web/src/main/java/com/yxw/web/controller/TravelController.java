@@ -1,7 +1,11 @@
 package com.yxw.web.controller;
 
+import com.yxw.web.annotation.UserInformationAnnotation;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Author:阿倪
@@ -16,8 +20,9 @@ public class TravelController {
     /**
      * @return 旅行者们  团队信息
      */
+    @UserInformationAnnotation
     @RequestMapping("/travelGroup")
-    public String travelGroup() {
+    public String travelGroup(HttpServletRequest request, Model model) {
 
 
         return "/travel/travelGroup";
@@ -29,11 +34,26 @@ public class TravelController {
      *
      * @return
      */
+    @UserInformationAnnotation
     @RequestMapping("/goTravel")
-    public String goTravel() {
+    public String goTravel(HttpServletRequest request, Model model) {
 
 
         return "/travel/goTravel";
+
+    }
+
+    /**
+     * 去旅行  自己的计划
+     *
+     * @return
+     */
+    @UserInformationAnnotation
+    @RequestMapping("/goTravelUp")
+    public String goTravelUp(HttpServletRequest request, Model model) {
+
+
+        return "/travel/travelPlan";
 
     }
 
@@ -42,8 +62,9 @@ public class TravelController {
      *
      * @return
      */
+    @UserInformationAnnotation
     @RequestMapping("/travelPlan")
-    public String travelPlan() {
+    public String travelPlan(HttpServletRequest request, Model model) {
 
 
         return "/travel/travelPlan";
@@ -55,8 +76,9 @@ public class TravelController {
      *
      * @return
      */
+    @UserInformationAnnotation
     @RequestMapping("/backTravel")
-    public String backTravel() {
+    public String backTravel(HttpServletRequest request, Model model) {
 
 
         return "/travel/backTravel";

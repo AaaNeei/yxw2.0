@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.dubbo.config.annotation.Reference;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -124,9 +125,10 @@ public class RegisterController {
             model.addAttribute("msg", "手机验证码不一致!");
             return "/error";
         }
+        student.setCreateTime(new Date());
         studentService.addUser(student, request);
         model.addAttribute("flag", "success");
-        return "/page_search";
+        return "/error/404";
     }
 
     @ResponseBody
