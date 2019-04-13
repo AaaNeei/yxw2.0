@@ -1,8 +1,6 @@
 package com.yxw.web.controller;
 
-import com.yxw.web.entity.MobileCode;
 import com.yxw.sms.service.SmsService;
-import com.yxw.web.entity.Province;
 import com.yxw.web.entity.School;
 import com.yxw.web.entity.Student;
 import com.yxw.web.entity.enumEntity.RedisKeyName;
@@ -11,7 +9,6 @@ import com.yxw.web.service.RegisterService;
 import com.yxw.web.service.SchoolService;
 import com.yxw.web.service.StudentService;
 import com.yxw.web.utils.EncodeAndDecode;
-import com.yxw.web.utils.security.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -23,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.dubbo.config.annotation.Reference;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;

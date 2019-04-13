@@ -87,7 +87,6 @@
             <if test="createTime != null">
                 create_time,
             </if>
-            -- create_time,
             <if test="stuUsername != null">
                 stu_username,
             </if>

@@ -9,13 +9,13 @@ package com.yxw.travel.enumUtil;
  */
 public enum TravelGoWay {
     TRAVEL_GO_WAY_FOOT("徒步", 1),
-    TRAVEL_GO_WAY_TRAIN("徒步", 2),
+    TRAVEL_GO_WAY_TRAIN("火车", 2),
     TRAVEL_GO_WAY_CAR("汽车", 3),
     TRAVEL_GO_WAY_AIRCRAFT("飞机", 4),
     TRAVEL_GO_WAY_RIDING("骑行", 5),
     TRAVEL_GO_WAY_CRH("动车", 6),
-    TRAVEL_GO_WAY_SELF("自驾", 1),
-    TRAVEL_GO_WAY_OTHER("其他", 1),;
+    TRAVEL_GO_WAY_SELF("自驾", 7),
+    TRAVEL_GO_WAY_OTHER("其他", 8),;
 
     TravelGoWay(String way, int value) {
         this.way = way;

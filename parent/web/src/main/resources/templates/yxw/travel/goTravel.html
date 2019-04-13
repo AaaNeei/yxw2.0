@@ -60,7 +60,7 @@
             <div class="headline"><h3>基本信息</h3></div>
             <ul class="unstyled who margin-bottom-20">
                 <li><h4>旅行者:</h4>
-                    <input type="text" value="" placeholder="团队名称"/>
+                    <input type="text" name="groupName" id="groupName" placeholder="团队名称"/>
                 </li>
                 <li style="height: 45px;">
                     <h4 class="span5">预成员数:</h4>
@@ -68,7 +68,7 @@
                         <a class="glyphicons no-js circle_minus"
                            style="border-right-width: 10px;padding-left: 0px;right: 10px"
                            href="#"><i></i></a>
-                    <input type="text" value="1" style="width: 30px" placeholder="1"/>
+                    <input type="text" value="1" id="memberNum" name="memberNum" style="width: 30px" placeholder="1"/>
                     <a class="glyphicons no-js circle_plus" style="border-right-width: 10px;padding-left: 0px;"
                        href="#"><i></i></a>
                     </span>
@@ -107,9 +107,11 @@
                         <i class="icon-resize-small"></i>
                         <h3>从哪到哪</h3>
                         <label style="margin-top: 50px;">出发地:</label>
-                        <input type="text" class="border-radius-none" placeholder="合肥"/>
+                        <input type="text" name="groupStartLine" id="groupStartLine" class="border-radius-none"
+                               placeholder="合肥"/>
                         <label>目的地:</label>
-                        <input type="text" class="border-radius-none" placeholder="南京"/>
+                        <input type="text" name="groupEndLine" id="groupEndLine" class="border-radius-none"
+                               placeholder="南京"/>
                     </div>
                 </div>
                 <div class="span4">
@@ -117,9 +119,11 @@
                         <i class="icon-cogs"></i>
                         <h3>时间规划</h3>
                         <label style="margin-top: 50px;">出发日期:</label>
-                        <input type="date" class="border-radius-none" placeholder=""/>
+                        <input type="date" name="groupTravelStartTimeStr" id="groupTravelStartTimeStr"
+                               class="border-radius-none" placeholder=""/>
                         <label>返程日期:</label>
-                        <input type="date" class="border-radius-none" placeholder=""/>
+                        <input type="date" name="groupTravelEndTimeStr" id="groupTravelEndTimeStr" class="border-radius-none"
+                               placeholder=""/>
                     </div>
                 </div>
                 <div class="span4">
@@ -127,7 +131,17 @@
                         <i class="icon-plane"></i>
                         <h3>行程规划</h3>
                         <label style="margin-top: 50px;">出行方式:</label>
-                        <input type="text" class="border-radius-none" placeholder="高铁"/>
+                        <!--<input type="text" class="border-radius-none" placeholder="高铁"/>-->
+                        <select id="goWay" name="goWay">
+                            <option value="1">徒步</option>
+                            <option value="2">火车</option>
+                            <option value="3">汽车</option>
+                            <option value="4">飞机</option>
+                            <option value="5">骑行</option>
+                            <option value="6">动车</option>
+                            <option value="7">自驾</option>
+                            <option value="8">其他</option>
+                        </select>
                         <label>路线规划:</label>
                         <input type="text" class="border-radius-none" placeholder="A-B-C-A"/>
                     </div>

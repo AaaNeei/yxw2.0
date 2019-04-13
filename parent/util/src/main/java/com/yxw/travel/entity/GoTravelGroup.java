@@ -30,6 +30,15 @@ public class GoTravelGroup implements Serializable {
     private String goWay;//           go_way 出行方式
     private int groupState; //    group_state成团状态(枚举类获取TravelGroupState)
     private int stuId;//            stu_id组队发起人id
+    private int memberNum;//member_num 预计成员数量
+
+    public int getMemberNum() {
+        return memberNum;
+    }
+
+    public void setMemberNum(int memberNum) {
+        this.memberNum = memberNum;
+    }
 
     public String getGoWay() {
         return goWay;

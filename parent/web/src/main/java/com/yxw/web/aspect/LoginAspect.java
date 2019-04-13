@@ -49,18 +49,18 @@ public class LoginAspect {
     /**
      * 扫包形式
      */
-    /*@Pointcut("execution(public * com.yxw.web.controller..*.*(..))")
+    @Pointcut("execution(public * com.yxw.web.controller..*.*(..))")
     public void login() {
     }
-*/
+
 
     /**
      * 扫描是否添加注解形式
      */
-    @Pointcut("@annotation(com.yxw.web.annotation.UserInformationAnnotation)")
+   /*  @Pointcut("@annotation(com.yxw.web.annotation.UserInformationAnnotation)")
     public void login() {
     }
-
+*/
     @Before("login()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
         logger.info("aop前置对象开始---->增强model");
@@ -69,42 +69,33 @@ public class LoginAspect {
         Student student = null;
         HttpServletRequest request = null;
         Model model = null;
-       /* for (int i = 0; i < args.length; i++) {
-            if (args[i] instanceof HttpServletRequest) {
-                request = (HttpServletRequest) args[i];
-                student = (Student) redisTemplate.opsForValue().get(RedisKeyName.YXW_LOGIN_STUDENT + request.getSession().getId());
-                if (student != null) {
-                    for (int j = 0; j < args.length; j++) {
-                        if (args[j] instanceof Model) {
-                            model = (Model) args[j];
-                            model.addAttribute("student", student);
-                            break;
-                        }
-                    }
-                }
-            }
-        }*/
+
         for (int i = 0; i < args.length; i++) {
             if (args[i] instanceof HttpServletRequest) {
                 request = (HttpServletRequest) args[i];
                 student = (Student) redisTemplate.opsForValue().get(RedisKeyName.YXW_LOGIN_STUDENT + request.getSession().getId());
                 if (student != null && model != null) {
                     model.addAttribute("student", student);
-                    break;
+                    continue;
                 }
             }
+            if (args[i] instanceof Student) {
+                Student  student1=(Student)args[i];
+                //先遍历到HttpServletRequest，student不为null
+                if(student != null){
+                    student1 = student;
+                }
+            }
+
             if (args[i] instanceof Model) {
                 model = (Model) args[i];
                 if (student != null && model != null) {
                     model.addAttribute("student", student);
-                    break;
+                    continue;
                 }
             }
-
         }
-
         logger.info("获取student用户对象--->" + student);
-
 
     }
 

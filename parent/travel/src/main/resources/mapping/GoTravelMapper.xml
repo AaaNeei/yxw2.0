@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yxw.travel.mapper.GoTravelMapper">
+    <resultMap id="GoTravelGroupMap" type="com.yxw.travel.entity.GoTravelGroup">
+        <id column="group_id" property="groupId" jdbcType="INTEGER"/>
+        <result column="group_name" property="groupName" jdbcType="VARCHAR"/>
+        <result column="group_start_line" property="groupStartLine" jdbcType="VARCHAR"/>
+        <result column="group_end_line" property="groupEndLine" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="update_time" property="updateTime" jdbcType="DATE"/>
+        <result column="group_up_start_time" property="groupUpStratTime" jdbcType="DATE"/>
+        <result column="group_up_end_time" property="groupUpEndTime" jdbcType="DATE"/>
+        <result column="group_travel_start_time" property="groupTravelStartTime" jdbcType="DATE"/>
+        <result column="group_travel_end_time" property="groupTravelEndTime" jdbcType="DATE"/>
+        <result column="group_information" property="groupInformation" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="group_state" property="groupState" jdbcType="INTEGER"/>
+        <result column="stu_id" property="stuId" jdbcType="INTEGER"/>
+        <result column="go_way" property="goWay" jdbcType="VARCHAR"/>
+        <result column="member_num" property="memberNum" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="GoTravelGroup_Column_List">
+       group_id, group_name, group_start_line, group_end_line,create_time,
+       update_time,group_up_start_time,group_up_end_time,group_travel_start_time,
+       group_travel_end_time,group_information,comment,group_state,stu_id,
+       go_way,member_num
+    </sql>
+    <insert id="insertGoTravel" parameterType="com.yxw.travel.entity.GoTravelGroup">
+        insert into travel_group_yxw
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <include refid="GoTravelGroup_Column_List"/>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            null,
+            #{groupName},
+            #{groupStartLine},
+            #{groupEndLine},
+            #{createTime},
+            #{updateTime},
+            #{groupUpStratTime},
+            #{groupUpEndTime},
+            #{groupTravelStartTime},
+            #{groupTravelEndTime},
+            #{groupInformation},
+            #{comment},
+            #{groupState},
+            #{stuId},
+            #{goWay},
+            #{memberNum}
+        </trim>
+
+    </insert>
+
+    <select id="selectAllGoTravel" resultMap="GoTravelGroupMap">
+        select
+        <include refid="GoTravelGroup_Column_List"/>
+        from
+        travel_group_yxw
+        -- 后期分页实现
+    </select>
+
+
+    <update id="updateGoTravel" parameterType="com.yxw.travel.entity.GoTravelGroup">
+        update travel_group_yxw
+        <set>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="groupState != null">
+                group_state = #{groupState},
+            </if>
+            <if test="groupName != null">
+                group_name = #{groupName},
+            </if>
+            -- 后期需要补齐其他修改,或者另起其他接口实现修改
+        </set>
+        where stu_id = #{stuId}
+    </update>
+</mapper>
